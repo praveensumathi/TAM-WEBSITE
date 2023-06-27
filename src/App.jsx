@@ -1,5 +1,3 @@
-
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Drawer from "./Drawer";
 import Techonologies from "./techonologies";
 // import InfoStream from "./InfoStream";
@@ -15,10 +13,10 @@ function App() {
         </Routes>
       </BrowserRouter> */}
 
-      <Drawer/>
+      <Drawer />
       {/* <Techonologies/> */}
     </div>
   );
 }
 
-export default App
+export default App;

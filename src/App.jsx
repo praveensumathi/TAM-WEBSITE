@@ -1,19 +1,22 @@
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Drawer from "./Drawer";
-import InfoStream from "./InfoStream";
+import Techonologies from "./techonologies";
+// import InfoStream from "./InfoStream";
 
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      {/* <BrowserRouter>
+        <Drawer/>
         <Routes>
-          <Route path="/" element={<Drawer />} />
-          <Route path="/1" element={<InfoStream/>} />
+          <Route path="/" element={<Drawer />} />  *
+          <Route path="/" element={<Techonologies/>} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
 
-      {/* <Drawer/> */}
+      <Drawer/>
+      {/* <Techonologies/> */}
     </div>
   );
 }

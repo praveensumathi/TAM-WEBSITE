@@ -1,16 +1,24 @@
+import React from "react";
 import Drawer from "./Drawer";
-import InfoStream from "./InfoStream";
+import InfoStream1 from "./InfoStream1";
+import Testimonial from "./Testimonial";
+import About from "./About";
+import CssBaseline from "@mui/material/CssBaseline";
+import Drawer from "./Drawer";
 import Contact from "./Contact";
 import Home from "./Homeimage";
 import Techonologies from "./techonologies";
-// import InfoStream from "./InfoStream";
 
 function App() {
   return (
     <div>
-      <Contact />
-      <Home />
+      <CssBaseline/> 
       <Drawer />
+      <Home />
+      <InfoStream1 />
+      {/* <Testimonial /> */}
+      <Contact />
+      {/* <About/> */}
     </div>
   );
 }

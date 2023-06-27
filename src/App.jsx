@@ -1,19 +1,24 @@
-
+import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Drawer from "./Drawer";
-import InfoStream from "./InfoStream";
+import InfoStream1 from "./InfoStream1";
+import Testimonial from "./Testimonial";
+import About from "./About";
+import CssBaseline from "@mui/material/CssBaseline";
 
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      <CssBaseline/>
+      {/* <BrowserRouter>
         <Routes>
           <Route path="/" element={<Drawer />} />
-          <Route path="/1" element={<InfoStream/>} />
         </Routes>
-      </BrowserRouter>
-
+      </BrowserRouter> */}
       {/* <Drawer/> */}
+      <InfoStream1 />
+      {/* <Testimonial /> */}
+      {/* <About/> */}
     </div>
   );
 }

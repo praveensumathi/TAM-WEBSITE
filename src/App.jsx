@@ -2,6 +2,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Drawer from "./Drawer";
 import InfoStream from "./InfoStream";
+import Contact from "./Contact";
+import Home from "./Homeimage";
 
 function App() {
   return (
@@ -12,7 +14,8 @@ function App() {
           <Route path="/1" element={<InfoStream/>} />
         </Routes>
       </BrowserRouter>
-
+      <Contact />
+      <Home/>
       {/* <Drawer/> */}
     </div>
   );

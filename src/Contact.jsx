@@ -1,6 +1,8 @@
 
 import React, { useState } from 'react';
 import { TextField, Button } from '@mui/material';
+import cimg from './image/contactimg.png';
+
 
 const Contact = () => {
     const [name, setName] = useState('');
@@ -17,16 +19,18 @@ const Contact = () => {
     };
 
     const backgroundStyle = {
-        backgroundImage: 'url("https://cdn.pixabay.com/photo/2016/05/31/10/52/contact-us-1426589_640.png")',
+        backgroundImage: `url(${cimg})` ,
         backgroundSize: 'cover',
         height: '600px',
         justifyContent: 'center',
-        padding: '10px'
+        padding: '10px',
+        paddingLeft:'20px',
     };
 
     return (
 
         <div className='img' style={backgroundStyle}>
+            <h3>Contact Us</h3>
             <div>
                 <TextField
                     label="Name"

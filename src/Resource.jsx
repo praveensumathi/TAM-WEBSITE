@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
-export default function App() {
+export default function Resource() {
   const settings = {
     fade: true,
     infinite: true,

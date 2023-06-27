@@ -18,6 +18,13 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import InfoIcon from "@mui/icons-material/Info";
 import Techonologies from "./techonologies";
+import Home from "./Homeimage";
+import InfoStream1 from "./InfoStream1";
+import Resource from "./Resource";
+import Testimonial from "./Testimonial";
+import Contact from "./Contact";
+import About from "./About";
+import Portfolio from "./Portfolio";
 const drawerWidth = 240;
 const navItems = [
   { label: " Home", link: "/", icon: <HomeIcon color="primary" /> },
@@ -110,7 +117,14 @@ export default function Drawers() {
       </AppBar>
 
       <Main>
-        <Techonologies/>
+        <Home />
+        <InfoStream1/>
+        <Techonologies />
+        <Resource />
+        <Portfolio />
+        <Testimonial />
+        <Contact /> 
+        <About/>
       </Main>
 
       <Drawer

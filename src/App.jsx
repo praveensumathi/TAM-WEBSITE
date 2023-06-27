@@ -1,3 +1,6 @@
+
+
+import Resource from "./Resource";
 import React from "react";
 import Drawer from "./Drawer";
 import InfoStream1 from "./InfoStream1";
@@ -16,6 +19,7 @@ function App() {
       <Drawer />
       <Home />
       <InfoStream1 />
+      <Resource/>
       {/* <Testimonial /> */}
       <Contact />
       {/* <About/> */}

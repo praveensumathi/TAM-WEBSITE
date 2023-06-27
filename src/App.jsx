@@ -1,26 +1,26 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Drawer from "./Drawer";
 import InfoStream1 from "./InfoStream1";
 import Testimonial from "./Testimonial";
 import About from "./About";
 import CssBaseline from "@mui/material/CssBaseline";
+import Drawer from "./Drawer";
+import Contact from "./Contact";
+import Home from "./Homeimage";
+import Techonologies from "./techonologies";
 
 function App() {
   return (
     <div>
-      <CssBaseline/>
-      {/* <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Drawer />} />
-        </Routes>
-      </BrowserRouter> */}
-      {/* <Drawer/> */}
+      <CssBaseline/> 
+      <Drawer />
+      <Home />
       <InfoStream1 />
       {/* <Testimonial /> */}
+      <Contact />
       {/* <About/> */}
     </div>
   );
 }
 
-export default App
+export default App;

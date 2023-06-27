@@ -17,6 +17,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import InfoIcon from "@mui/icons-material/Info";
+import Techonologies from "./techonologies";
 const drawerWidth = 240;
 const navItems = [
   { label: " Home", link: "/", icon: <HomeIcon color="primary" /> },
@@ -82,8 +83,8 @@ export default function Drawers() {
             // backgroundcolor="red"
             alignItems={"center"}
             // justifyContent={"center"}
-            gap={1}
-            margin=""
+            // gap={1}
+            
           >
             <AttractionsIcon sx={{ paddingTop: "0px" }} />
             Tam Tree
@@ -108,7 +109,9 @@ export default function Drawers() {
         </Toolbar>
       </AppBar>
 
-      <Main></Main>
+      <Main>
+        <Techonologies/>
+      </Main>
 
       <Drawer
         variant="persistent"

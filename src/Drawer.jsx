@@ -25,25 +25,32 @@ import Testimonial from "./Testimonial";
 import Contact from "./Contact";
 import About from "./About";
 import Portfolio from "./Portfolio";
+import { Divider } from "@mui/material";
+import Logo2 from './image/Logo2.png';
+import HomePage from "./HomePage";
+
 const drawerWidth = 240;
 const navItems = [
   { label: " Home", link: "/", icon: <HomeIcon color="primary" /> },
   {
-    label: "Profile",
-    link: "/profile",
+    label: "InfoStream",
+    link: "/infostream",
     icon: <AccountCircleIcon color="primary" />,
   },
   {
-    label: "Orders",
-    link: "/orders",
+    label: "Technologies",
+    link: "/tecnologies",
     icon: <AddShoppingCartIcon color="primary" />,
   },
-  { label: "About", link: "/about", icon: <InfoIcon color="primary" /> },
+  { label: "Resource", link: "/resource", icon: <InfoIcon color="primary" /> },
+  { label: "Portfolio", link: "/portfolio", icon: <InfoIcon color="primary" /> },
+  { label: "Testimonial", link: "/testimonial", icon: <InfoIcon color="primary" /> },
+  { label: "Contact Us", link: "/contact us", icon: <InfoIcon color="primary" /> },
+  { label: "About Us", link: "/about", icon: <InfoIcon color="primary" /> },
 ];
 
 const Main = styled("main")(({ theme, open }) => ({
   flexGrow: 1,
-  padding: "20px",
   transition: theme.transitions.create("padding", {
     easing: theme.transitions.easing.easeOut,
     duration: theme.transitions.duration.enteringScreen,
@@ -63,7 +70,7 @@ const Title = styled(Typography)({
   padding: "10px",
 });
 const Container = styled("div")({
-  width: "100vw",
+  width: "100%",
   height: "100vh",
 });
 export default function Drawers() {
@@ -91,10 +98,20 @@ export default function Drawers() {
             alignItems={"center"}
             // justifyContent={"center"}
             // gap={1}
-            
           >
-            <AttractionsIcon sx={{ paddingTop: "0px" }} />
-            Tam Tree
+            <Box
+              component="img"
+              src={Logo2}
+              sx={{
+                height: "40px",
+                width: "40px",
+                borderRadius: "50%",
+                backgroundColor: "whitesmoke",
+              }}
+            />
+            <Typography variant="h4" sx={{ fontFamily: "cursive" }}>
+              TamTree
+            </Typography>
           </Title>
           <Box sx={{ display: { xs: "none", sm: "block" }, flexGrow: 0.6 }}>
             {navItems.map((item) => (
@@ -117,13 +134,15 @@ export default function Drawers() {
       </AppBar>
 
       <Main>
-        <Home />
-        <InfoStream1/>
+        {/* <Home /> */}
+        <HomePage/>
+        <InfoStream1 />
         <Techonologies />
         <Resource />
         <Portfolio />
+        <Divider sx={{ margin: "10px" }} />
         <Testimonial />
-        <Contact /> 
+        <Contact />
         <About/>
       </Main>
 
@@ -140,7 +159,11 @@ export default function Drawers() {
         }}
       >
         <DrawerHeader>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1,display:"flex", alignItems:"center" }}>
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{ flexGrow: 1, display: "flex", alignItems: "center" }}
+          >
             <AttractionsIcon sx={{ padding: "4px" }} />
             Tam Tree
           </Typography>

@@ -10,65 +10,72 @@ import Rating from '@mui/material/Rating';
 export default function Portfolio() {
 
     const image2 = [
-        {
-            id: 1,
-            img: "https://picsum.photos/300/200",
-            title: "project-1",
-            description:
-                "Back-end developers are the experts who build and maintain the mechanisms that process data and perform actions on websites. Unlike front-end developers, who control everything you can see on a website",
-            star: 4,
-        },
-        {
-            id: 2,
-            img: "https://picsum.photos/300/200",
-            title: "project-2",
-            description:
-                "Frontend as a Service is a composable commerce solution that allows developers to use cloud-based modules to develop a fully performant eCommerce frontend",
-            star: 3,
-        },
-        
+      {
+        id: 1,
+        img: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600",
+        title: "project-1",
+        description:
+          "Back-end developers are the experts who build and maintain the mechanisms that process data and perform actions on websites. Unlike front-end developers, who control everything you can see on a website",
+        star: 4,
+      },
+      {
+        id: 2,
+        img: "https://images.pexels.com/photos/811587/pexels-photo-811587.jpeg?auto=compress&cs=tinysrgb&w=600",
+        title: "project-2",
+        description:
+          "Frontend as a Service is a composable commerce solution that allows developers to use cloud-based modules to develop a fully performant eCommerce frontend",
+        star: 5,
+      },
     ];
 
 
     return (
-        <Container>
-            <Typography><h2> Project</h2></Typography>
-            {image2.map((item) => {
-                return <Card key={item.id} sx={{ maxWidth: 345 }}>
-                    <CardActionArea>
-                        <CardMedia
-                            component="img"
-                            height="140"
-                            image={item.img}
-                            alt="green iguana"
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h5" component="div">
-                                {item.title}
-                                {/* <Rating sx={{ float: "right" }} name="size-medium" defaultValue={item.star} /> */}
-                            </Typography>
+      <Box sx={{ marginBottom: "15px",padding:"15px" }}>
+        <Typography variant="h5">
+          <b>Portfolio</b>
+        </Typography>
+        {image2.map((item) => {
+          return (
+            <Card key={item.id} sx={{ marginBottom: "10px" ,margin:"10px"}}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  height="140"
+                  image={item.img}
+                  alt="green iguana"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    {item.title}
+                    {/* <Rating sx={{ float: "right" }} name="size-medium" defaultValue={item.star} /> */}
+                  </Typography>
 
-                            <Rating name="size-medium" defaultValue={item.star} />
-                            <Typography variant="body2" color="text.secondary">
-                                {item.description}
-                            </Typography>
-                        </CardContent>
-                    </CardActionArea>
+                  <Rating name="size-medium" defaultValue={item.star} />
+                  <Typography variant="body2" color="text.secondary">
+                    {item.description}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
 
-                    <Box>
-                        <Button
-                            size="small" color="primary"
-                            sx={{ marginBottom: "10px", float: "right", textTransform: "none" }}
-                        >
-                            learn More
-                        </Button>
-                    </Box>
-
-                </Card>
-            })}
-            <Box sx={{ textAlign: "center", paddingTop: "20px" }}>
-                <Button >view More</Button>
-            </Box>
-        </Container>
+              <Box>
+                <Button
+                  size="small"
+                  color="primary"
+                  sx={{
+                    marginBottom: "10px",
+                    float: "right",
+                    textTransform: "none",
+                  }}
+                >
+                  learn More
+                </Button>
+              </Box>
+            </Card>
+          );
+        })}
+        <Box sx={{ textAlign: "center", paddingTop: "20px" }}>
+          <Button variant='outlined' sx={{borderRadius:"50px",boxShadow:"1px 1px 10px lightblue"}}>view More</Button>
+        </Box>
+      </Box>
     );
 }

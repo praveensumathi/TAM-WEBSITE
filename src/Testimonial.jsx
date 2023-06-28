@@ -17,21 +17,21 @@ function Testimonial() {
   const clinet = [
     {
       id: 1,
-      img: "https://picsum.photos/300/200",
+      img: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=600",
       name: "Jerry",
       command:
         "Es ist unmöglich oder würde zu lange brauchen, diese Verzauberungen zu bekommen",
     },
     {
       id: 2,
-      img: "https://picsum.photos/300/200",
+      img: "https://images.pexels.com/photos/1090387/pexels-photo-1090387.jpeg?auto=compress&cs=tinysrgb&w=600",
       name: "John",
       command:
         "Es ist unmöglich oder würde zu lange brauchen, diese Verzauberungen zu bekommen",
     },
     {
       id: 3,
-      img: "https://picsum.photos/300/200",
+      img: "https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&w=600",
       name: "Petter",
       command:
         "Es ist unmöglich oder würde zu lange brauchen, diese Verzauberungen zu bekommen",

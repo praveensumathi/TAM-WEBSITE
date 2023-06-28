@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { TextField, Button } from '@mui/material';
+import { TextField, Button, Typography } from '@mui/material';
 import cimg from './image/contactimg.png';
 
 
@@ -21,60 +21,68 @@ const Contact = () => {
     const backgroundStyle = {
         backgroundImage: `url(${cimg})` ,
         backgroundSize: 'cover',
-        height: '600px',
         justifyContent: 'center',
         padding: '10px',
         paddingLeft:'20px',
     };
 
     return (
-
-        <div className='img' style={backgroundStyle}>
-            <h3>Contact Us</h3>
-            <div>
-                <TextField
-                    label="Name"
-                    variant="outlined"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    fullWidth
-                    margin="normal"
-                />
-                <TextField
-                    label="Email"
-                    variant="outlined"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    fullWidth
-                    margin="normal"
-                />
-                <TextField
-                    label="Country"
-                    variant="outlined"
-                    value={country}
-                    onChange={(e) => setCountry(e.target.value)}
-                    fullWidth
-                    margin="normal"
-                />
-                <TextField
-                    label="Message"
-                    variant="outlined"
-                    multiline
-                    rows={4}
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    fullWidth
-                    margin="normal"
-                />
-                <div style={{ textAlign: 'center' }}>
-                    <Button type="submit" variant="contained" color="primary">
-                        Submit
-                    </Button>
-                </div>
-
+      <div className="img" style={backgroundStyle}>
+        <Typography variant="h5">Contact Us</Typography>
+        <div>
+          
+            <TextField
+              label="Name"
+              variant="outlined"
+              value={name}
+              sx={{ boxShadow: "1px 1px 10px black" }}
+              onChange={(e) => setName(e.target.value)}
+              fullWidth
+              margin="normal"
+            />
+            <TextField
+              label="Email"
+              variant="outlined"
+              value={email}
+              sx={{ boxShadow: "1px 1px 10px black" }}
+              onChange={(e) => setEmail(e.target.value)}
+              fullWidth
+              margin="normal"
+            />
+            <TextField
+              label="Country"
+              variant="outlined"
+              value={country}
+              sx={{ boxShadow: "1px 1px 10px black" }}
+              onChange={(e) => setCountry(e.target.value)}
+              fullWidth
+              margin="normal"
+            />
+            <TextField
+              label="Message"
+              variant="outlined"
+              sx={{ boxShadow: "1px 1px 10px black" }}
+              multiline
+              rows={4}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              fullWidth
+              margin="normal"
+            />
+            <div style={{ textAlign: "center" }}>
+              <Button
+                type="submit"
+                variant="contained"
+                color="primary"
+                fullWidth
+                sx={{ textTransform: "none" }}
+              >
+                Contact Us
+              </Button>
             </div>
+         
         </div>
-
+      </div>
     );
 };
 

@@ -11,12 +11,14 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Contact from "./Contact";
 import Home from "./Homeimage";
 import Techonologies from "./techonologies";
+import HomePage from "./HomePage";
 
 function App() {
   return (
     <div>
       <CssBaseline/> 
       <Drawer />
+      {/* <HomePage/> */}
       {/* <Home /> */}
       {/* <InfoStream1 /> */}
       {/* <Resource/> */}

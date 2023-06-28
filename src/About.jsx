@@ -1,4 +1,4 @@
-import { Box, Container, Divider, Typography } from "@mui/material";
+import { Box, Container, CssBaseline, Divider, Typography } from "@mui/material";
 import React from "react";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -8,8 +8,14 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 function About() {
   return (
-    <Box>
-      <Container sx={{ backgroundColor: "#3d474f", color: "white" }}>
+    <div sx={{ paddingRight: "0", paddingLeft: "0" }}>
+      <div
+        style={{
+          backgroundColor: "#3d474f",
+          color: "white",
+          padding: "20px",
+        }}
+      >
         <Box sx={{ display: "flex", flexDirection: "column" }}>
           <Typography variant="h6">Address:</Typography>
           <Divider
@@ -52,35 +58,30 @@ function About() {
           />
           <Typography>@tamtree.in</Typography>
         </Box>
-        <Typography
-          variant="h6"
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            marginTop: "20px",
-            textDecoration: "underline",
-          }}
-        >
-          Connect with Us
-        </Typography>
-        {/* <Divider
-          sx={{
-            backgroundColor: "white",
-            width: "170px",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        /> */}
-        <Box sx={{ display: "flex", justifyContent: "center", gap: "20px" }}>
-          <FacebookIcon sx={{ marginBottom: "10px" }} />
-          <TwitterIcon />
-          <YouTubeIcon/>
-          <InstagramIcon />
-          <LinkedInIcon />
-        </Box>
-      </Container>
-      <Container
-        sx={{
+        <Container>
+          <Typography
+            variant="h6"
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              marginTop: "20px",
+              textDecoration: "underline",
+            }}
+          >
+            Connect with Us
+          </Typography>
+
+          <Box sx={{ display: "flex", justifyContent: "center", gap: "20px" }}>
+            <FacebookIcon sx={{ marginBottom: "10px" }} />
+            <TwitterIcon />
+            <YouTubeIcon />
+            <InstagramIcon />
+            <LinkedInIcon />
+          </Box>
+        </Container>
+      </div>
+      <div
+        style={{
           backgroundColor: "#1b1e21",
           color: "white",
           display: "flex",
@@ -97,8 +98,8 @@ function About() {
           <Divider sx={{ backgroundColor: "white", padding: "2px" }} />
           <Typography>Privacy</Typography>
         </Box>
-      </Container>
-    </Box>
+      </div>
+    </div>
   );
 }
 

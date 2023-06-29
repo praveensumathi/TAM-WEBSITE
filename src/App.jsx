@@ -2,7 +2,7 @@
 
 import Resource from "./Resource";
 import React from "react";
-import Drawer from "./Drawer";
+// import Drawer from "./Drawer";
 import InfoStream1 from "./InfoStream1";
 import Testimonial from "./Testimonial";
 import About from "./About";

@@ -47,7 +47,7 @@ export default function Portfolio() {
   ];
 
   return (
-      <Box sx={{ marginBottom: "15px",padding:"15px" }}>
+      <Box sx={{ marginBottom: "15px",padding:"30px" }}>
       <Typography variant="h5">
         <b>Portfolio</b>
       </Typography>

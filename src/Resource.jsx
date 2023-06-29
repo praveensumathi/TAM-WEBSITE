@@ -11,19 +11,20 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { shadows } from "@mui/system";
 import { Translate } from "@mui/icons-material";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import { useTheme } from "@mui/material/styles";
+import { useMediaQuery } from '@mui/material';
+
+
 
 export default function Resource() {
+  const isSmallScreen = useMediaQuery('(max-width: 600px)');
 
-    const theme = useTheme();
-   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
-   const ld = isSmallScreen ? 1 : 2;
+
+
   const settings = {
     // fade: true,
     infinite: true,
     speed: 700,
-    slidesToShow: ld,
+    slidesToShow: isSmallScreen?1:2,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
@@ -61,6 +62,9 @@ export default function Resource() {
       />
     );
   }
+
+
+
   const imageURL = [
     {
       id: 1,
@@ -78,22 +82,33 @@ export default function Resource() {
     },
     {
       id: 3,
-      img: "https://media.istockphoto.com/id/1393858554/photo/relational-database-tables-with-server-room-and-datacenter-background-concept-of-database.jpg?b=1&s=612x612&w=0&k=20&c=wsc-TM8hTxr08jfnns_mWFyJ9vUMHFU19h7B1U7Xepw=",
-      title: "Website Design",
+      img: "https://images.pexels.com/photos/11813187/pexels-photo-11813187.jpeg?auto=compress&cs=tinysrgb&w=600",
+      title: "Frontend",
       description:
-        " Creating the visual layout and user interface design for websites.",
+        "Frontend as a Service is a composable commerce solution that allows developers to use cloud-based modules to develop a fully performant eCommerce frontend",
+    },
+    {
+      id: 4,
+      img: "https://media.istockphoto.com/id/1393858554/photo/relational-database-tables-with-server-room-and-datacenter-background-concept-of-database.jpg?b=1&s=612x612&w=0&k=20&c=wsc-TM8hTxr08jfnns_mWFyJ9vUMHFU19h7B1U7Xepw=",
+      title: "Backend",
+      description:
+        "Back-end developers are the experts who build and maintain the mechanisms that process data and perform actions on websites. Unlike front-end developers, who control everything you can see on a website",
     },
   ];
 
   return (
-    <Box sx={{marginBottom:"15px",padding:"30px"}}>
+    <Box sx={{ marginBottom: "15px",padding:"15px" }}>
       <Typography variant="h5">
         <b>Resources</b>
       </Typography>
-      <Slider {...settings}>
+      <Box >
+        <Slider {...settings}
+          className={isSmallScreen ? "portfolioBoxM" : "portfolioBoxL"}
+>
         {imageURL.map((item) => {
           return (
-            <Container>
+            <Box className={isSmallScreen ? "ResourcesCardBoxM" : "ResourcesCardBoxL"}
+>
               <Card
                 key={item.id}
                 sx={{
@@ -103,8 +118,7 @@ export default function Resource() {
                   backgroundPosition: "center",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
-                  borderRadius: "16px",
-                  
+                  borderRadius: "16px"
                 }}
               >
                 <Container
@@ -159,10 +173,11 @@ export default function Resource() {
                   <Button variant="contained">Learn More</Button>
                 </Box>
               </Card>
-            </Container>
+            </Box>
           );
         })}
-      </Slider>
+        </Slider>
+      </Box>
     </Box>
   );
 }

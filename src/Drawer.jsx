@@ -173,7 +173,16 @@ export default function Drawers() {
             component="div"
             sx={{ flexGrow: 1, display: "flex", alignItems: "center" }}
           >
-            <AttractionsIcon sx={{ padding: "4px" }} />
+            <Box
+              component="img"
+              src={Logo1}
+              sx={{
+                height: "40px",
+                width: "40px",
+                borderRadius: "50%",
+                // backgroundColor: "black",
+              }}
+            />
             Tam Tree
           </Typography>
           <IconButton onClick={handleRightDrawerClose}>

@@ -1,4 +1,11 @@
-import { Button, Box, Container, Typography, Card, Divider } from "@mui/material";
+import {
+  Button,
+  Box,
+  Container,
+  Typography,
+  Card,
+  Divider,
+} from "@mui/material";
 import Slider from "react-slick";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
@@ -116,7 +123,6 @@ export default function Resource() {
               >
                 <Container
                   sx={{
-                    backgroundColor: "ActiveBorder",
                     backgroundColor: "rgba(26, 182, 235,0.5)",
                     backgroundBlendMode: "darken",
                   }}
@@ -175,5 +181,3 @@ export default function Resource() {
     </Box>
   );
 }
-
-

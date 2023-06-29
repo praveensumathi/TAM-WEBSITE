@@ -13,7 +13,7 @@ import { Typography ,Box} from '@mui/material'
 
 function Techonologies() {
     return (
-      <Box sx={{marginBottom:"15px",padding:"15px"}}>
+      <Box sx={{marginBottom:"15px",padding:"30px"}}>
         <Typography variant="h5" sx={{marginBottom:"5px"}}>
           <b>Techonologies</b>
         </Typography>

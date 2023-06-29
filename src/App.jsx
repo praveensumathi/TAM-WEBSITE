@@ -1,5 +1,3 @@
-
-
 import Resource from "./Resource";
 import React from "react";
 // import Drawer from "./Drawer";
@@ -16,7 +14,7 @@ import HomePage from "./HomePage";
 function App() {
   return (
     <div>
-      <CssBaseline/> 
+      <CssBaseline />
       <Drawer />
       {/* <HomePage/> */}
       {/* <Home /> */}

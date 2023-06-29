@@ -6,6 +6,7 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
+
 function About() {
   return (
     <div sx={{ paddingRight: "0", paddingLeft: "0" }}>
@@ -95,7 +96,7 @@ function About() {
         </Typography>
         <Box sx={{ display: "flex", gap: "40px", padding: "5px" }}>
           <Typography>Disclaimer</Typography>
-          <Divider sx={{ backgroundColor: "white", padding: "2px" }} />
+          <Divider sx={{ backgroundColor: "white", padding: "1px" }} />
           <Typography>Privacy</Typography>
         </Box>
       </div>

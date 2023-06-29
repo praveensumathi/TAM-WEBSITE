@@ -7,7 +7,7 @@ import { Box, Button, CardActionArea, CardActions, Container } from '@mui/materi
 import StarIcon from '@mui/icons-material/Star';
 import Rating from '@mui/material/Rating';
 
-export default function Portfolio() {
+function Portfolio() {
 
     const image2 = [
       {
@@ -30,7 +30,7 @@ export default function Portfolio() {
 
 
     return (
-      <Box sx={{ marginBottom: "15px",padding:"15px" }}>
+      <Box sx={{ marginBottom: "15px",padding:"30px" }}>
         <Typography variant="h5">
           <b>Portfolio</b>
         </Typography>
@@ -79,3 +79,4 @@ export default function Portfolio() {
       </Box>
     );
 }
+export default Portfolio;

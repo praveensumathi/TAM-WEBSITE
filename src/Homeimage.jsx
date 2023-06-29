@@ -1,3 +1,4 @@
+import { Container } from '@mui/material';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
@@ -21,15 +22,11 @@ const Home = () => {
   return (
     <div style={{ marginBottom: "20px" }}>
       <div className="img" style={backgroundStyle}>
-        <div
-          style={{
+        <Container
+          sx={{
             color: "white",
-            display: "flex",
-            flexDirection:"column",
-            justifyContent: "center",
-            alignContent: "center",
-            padding: "10px",
-            paddingTop:"50px"
+            padding: "50px",
+            top:isSmallScreen?"auto":500,
           }}
         >
           <Typography variant="h4">
@@ -39,21 +36,20 @@ const Home = () => {
             Unleash Your Online Potential with our Exceptional Web Development
             Services
           </Typography>
-        </div>
+        </Container>
         <div>
           <Button
             variant="outlined"
             sx={{
-              color: "black",
-              border: "2px solid black",
               backgroundColor: "white",
               borderRadius: 60,
-              // justifyContent: "center",
-              // display:"flex"
               textTransform: "none",
-              top: isSmallScreen ? 50 : "auto",
-              left: isSmallScreen ? 150 : "auto",
-              width: isSmallScreen ? "30%" : "auto",
+              display: "flex",
+              justifyContent: "center",
+              alignContent:"center",
+              // top: isSmallScreen ? 45 : 270,
+              // left: isSmallScreen ? 150 : 550,
+              // width: isSmallScreen ? "30%" : "auto",
             }}
           >
             Learn more

@@ -28,6 +28,8 @@ import Portfolio from "./Portfolio";
 import { Divider } from "@mui/material";
 import Logo2 from './image/Logo2.png';
 import HomePage from "./HomePage";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 
 const drawerWidth = 240;
 const navItems = [
@@ -74,6 +76,11 @@ const Container = styled("div")({
   height: "100vh",
 });
 export default function Drawers() {
+   const theme = useTheme();
+  const isSmallScreen = useMediaQuery("(min-width:950px)");
+  const mlist = isSmallScreen ? "block" : "none";
+  const micon = isSmallScreen ? "none" : "block";
+  
   const [rightDrawerOpen, setRightDrawerOpen] = useState(false);
 
   const handleLeftDrawerOpen = () => {
@@ -113,7 +120,7 @@ export default function Drawers() {
               TamTree
             </Typography>
           </Title>
-          <Box sx={{ display: { xs: "none", sm: "block" }, flexGrow: 0.6 }}>
+          <Box sx={{ display:mlist, flexGrow: 0.6 }}>
             {navItems.map((item) => (
               <Button key={item.label} sx={{ color: "#ffff" }}>
                 {item.icon}
@@ -126,7 +133,7 @@ export default function Drawers() {
             color="inherit"
             aria-label="menu"
             onClick={handleLeftDrawerOpen}
-            sx={{ mr: 2, display: { sm: "none" } }}
+            sx={{ mr: 2, display: micon }}
           >
             <MenuIcon />
           </IconButton>

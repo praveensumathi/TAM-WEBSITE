@@ -4,13 +4,19 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { shadows } from "@mui/system";
 import { Translate } from "@mui/icons-material";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 
 export default function Resource() {
+
+    const theme = useTheme();
+   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+   const ld = isSmallScreen ? 1 : 2;
   const settings = {
     // fade: true,
     infinite: true,
     speed: 700,
-    slidesToShow: 1,
+    slidesToShow: ld,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
@@ -63,10 +69,17 @@ export default function Resource() {
       description:
         "Back-end developers are the experts who build and maintain the mechanisms that process data and perform actions on websites. Unlike front-end developers, who control everything you can see on a website",
     },
+    {
+      id: 3,
+      img: "https://media.istockphoto.com/id/1393858554/photo/relational-database-tables-with-server-room-and-datacenter-background-concept-of-database.jpg?b=1&s=612x612&w=0&k=20&c=wsc-TM8hTxr08jfnns_mWFyJ9vUMHFU19h7B1U7Xepw=",
+      title: "Website Design",
+      description:
+        " Creating the visual layout and user interface design for websites.",
+    },
   ];
 
   return (
-    <Container sx={{marginBottom:"15px"}}>
+    <Box sx={{marginBottom:"15px",padding:"30px"}}>
       <Typography variant="h5">
         <b>Resources</b>
       </Typography>
@@ -84,6 +97,7 @@ export default function Resource() {
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   borderRadius: "16px",
+                  
                 }}
               >
                 <Container
@@ -143,7 +157,7 @@ export default function Resource() {
           );
         })}
       </Slider>
-    </Container>
+    </Box>
   );
 }
 

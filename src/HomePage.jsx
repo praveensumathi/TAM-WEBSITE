@@ -1,9 +1,16 @@
 import { Box, Button, Container, Typography } from "@mui/material";
 import React from "react";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 function HomePage() {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const imgheight = isSmallScreen ? "auto" : "70vh";
+  const btn = isSmallScreen ? "auto" : "10vh";
+  const content = isSmallScreen ? "auto" : "25vh";
   return (
-    <Box sx={{ marginBottom: "15px" }}>
+    <Box sx={{ marginBottom: "15px"}}>
       <Box
         style={{
           backgroundImage:
@@ -11,17 +18,17 @@ function HomePage() {
           backgroundSize: "cover",
           backgroundColor: "rgba(0,0,0,0.5)",
           backgroundBlendMode: "darken",
+          height:imgheight
         }}
       >
         <Container
           style={{
             color: "white",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignContent: "center",
             padding: "10px",
-            paddingTop: "50px",
+            zIndex:1,
+            paddingTop: content,
+            paddingLeft:content,
+            
           }}
         >
           <Typography variant="h4">
@@ -39,9 +46,10 @@ function HomePage() {
               marginBottom: "10px",
               borderRadius: "20px",
               boxShadow: "1px 1px 1px lightblue",
+              marginTop:btn
             }}
           >
-            view More
+            Learn More
           </Button>
         </Box>
       </Box>

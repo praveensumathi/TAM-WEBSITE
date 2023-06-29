@@ -2,8 +2,14 @@ import React from "react";
 import { Container, Card, Box, Button, Divider } from "@mui/material";
 import Slider from "react-slick";
 import Typography from "@mui/material/Typography";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 
 function Testimonial() {
+
+    const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const card = isSmallScreen ? "auto" : "40vh";
   const settings = {
     //    fade:true,
     dots: true,
@@ -49,7 +55,7 @@ function Testimonial() {
         {clinet.map((item) => {
           return (
             <Container>
-              <Card key={item.id} sx={{ borderRadius: "20px", boxShadow: 3 }}>
+              <Card key={item.id} sx={{ borderRadius: "20px", boxShadow: 3,height:card }}>
                 <Container sx={{display:"flex",gap:"20px",marginBottom:"20px",marginTop:"10px"}}>
                   <Box
                     component="img"

@@ -12,7 +12,6 @@ const Contact = () => {
   const conheight = isSmallScreen ? "auto" : "90vh";
   const field = isSmallScreen ? "auto" : "50px";
   const fieldrl = isSmallScreen ? "auto" : "200px";
-  const bimg = isSmallScreen ? "cover" : "";
   const btn = isSmallScreen ? "auto" : "80px";
 
     const [name, setName] = useState('');
@@ -30,7 +29,7 @@ const Contact = () => {
 
     const backgroundStyle = {
       backgroundImage: `url(${cimg})`,
-      backgroundSize: bimg,
+      backgroundSize: "cover",
       justifyContent: "center",
       padding: "20px",
       height: conheight,
@@ -40,7 +39,18 @@ const Contact = () => {
 
     return (
       <Box className="img" style={backgroundStyle}>
-        <Typography variant="h5">Contact Us</Typography>
+        <Typography
+          variant="h5"
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            marginBottom: "20px",
+            fontStyle: "italic",
+            color:'white'
+          }}
+        >
+          Contact Us
+        </Typography>
         <div
           style={{
             padding: field,

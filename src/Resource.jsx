@@ -99,8 +99,15 @@ export default function Resource() {
   ];
 
   return (
-    <Box sx={{ marginBottom: "15px",padding:"30px" }}>
-      <Typography variant="h5">
+    <Box sx={{ marginBottom: "15px", padding: "30px" }}>
+      <Typography
+        variant="h5"
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          fontStyle: "italic",
+        }}
+      >
         <b>Resources</b>
       </Typography>
       <Box >
@@ -140,6 +147,7 @@ export default function Resource() {
                     {item.title}
                   </Typography>
                 </Container>
+                
                 <Divider
                   sx={{
                     backgroundColor: "rgba(6, 150, 199)",

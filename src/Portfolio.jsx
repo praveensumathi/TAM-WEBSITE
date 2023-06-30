@@ -11,7 +11,6 @@ import "./tam.css"
 export default function Portfolio() {
   const isSmallScreen = useMediaQuery('(max-width: 600px)');
   const isMediumScreen = useMediaQuery('(min-width: 651px) and (max-width: 960px)');
-  const isLargeScreen = useMediaQuery('(min-width: 961px)');
 
 
   const image2 = [
@@ -50,19 +49,26 @@ export default function Portfolio() {
   ];
 
   return (
-      <Box sx={{ marginBottom: "15px",padding:"30px" }}>
-      <Typography variant="h5">
+    <Box sx={{ marginBottom: "15px", padding: "30px" }}>
+      <Typography
+        variant="h5"
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          marginBottom: "20px",
+          fontStyle: "italic",
+        }}
+      >
         <b>Portfolio</b>
       </Typography>
       <Box
         className={isSmallScreen ? "portfolioBoxM" : "portfolioBoxL"}
-
         sx={{
-          display: 'flex',
-          flexDirection: isSmallScreen ? 'column' : 'row',
-          flexWrap: 'wrap',
+          display: "flex",
+          flexDirection: isSmallScreen ? "column" : "row",
+          flexWrap: "wrap",
           gap: 4,
-          padding:"10px"
+          padding: "10px",
         }}
       >
         {image2.map((item, index) => (

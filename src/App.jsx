@@ -12,6 +12,7 @@ import Techonologies from "./techonologies";
 import HomePage from "./HomePage";
 import Preloader from "./PreLoader";
 
+
 function App() {
    const [isLoading, setIsLoading] = useState(true);
 

@@ -9,10 +9,10 @@ import { useTheme } from "@mui/material/styles";
 const Contact = () => {
    const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
-  const conheight = isSmallScreen ? "auto" : "90vh";
+  const conheight = isSmallScreen ? "auto" : "100%";
   const field = isSmallScreen ? "auto" : "50px";
   const fieldrl = isSmallScreen ? "auto" : "200px";
-  const btn = isSmallScreen ? "auto" : "80px";
+  const btn = isSmallScreen ? "auto" : "5%";
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');

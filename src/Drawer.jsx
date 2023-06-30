@@ -122,7 +122,7 @@ export default function Drawers() {
               TamTree
             </Typography>
           </Title>
-          <Box sx={{ display:mlist, flexGrow: 0.6 }}>
+          <Box sx={{ display:mlist}}>
             {navItems.map((item) => (
               <Button key={item.label} sx={{ color: "#ffff" }}>
                 {item.icon}

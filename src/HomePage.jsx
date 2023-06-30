@@ -6,7 +6,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 function HomePage() {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
-  const imgheight = isSmallScreen ? "auto" : "70vh";
+  const imgheight = isSmallScreen ? "auto" :"100%";
   const btn = isSmallScreen ? "auto" : "10vh";
   const content = isSmallScreen ? "auto" : "25vh";
   return (

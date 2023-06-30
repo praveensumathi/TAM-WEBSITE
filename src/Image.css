@@ -1,20 +1,3 @@
-.portfolioBoxM {
-    /* display: block; */
-    justify-content: center;
-}
-
-.portfolioBoxL {
-    display: flex;
-    /* text-align: center; */
-    justify-content: center;
-    margin-left: 100px;
-    margin-right: 100px;
-    padding:"10px" ;
-}
-
-.ResourcesCardBoxL{
-    padding: 40px;
-}
 
 .button {
   color: #fff;
@@ -50,7 +33,7 @@
   color: whitesmoke;
 }
 
- .scrollable-content {
+ html {
   scrollbar-color:#d515b4 #94bbe9;
 
   scrollbar-width:   initial 200px;

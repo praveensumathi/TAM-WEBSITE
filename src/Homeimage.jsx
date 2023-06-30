@@ -22,14 +22,14 @@ const Home = () => {
   return (
     <div style={{ marginBottom: "20px" }}>
       <div className="img" style={backgroundStyle}>
-        <Container
+        <Container className='animation'
           sx={{
             color: "white",
             padding: "50px",
             top:isSmallScreen?"auto":500,
           }}
         >
-          <Typography variant="h4">
+          <Typography variant="h4"  className='text'>
             Transforming Ideas into Digital Masterpieces
           </Typography>
           <Typography variant='h6' sx={{padding:"10px"}}>

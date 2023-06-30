@@ -11,6 +11,7 @@ import Home from "./Homeimage";
 import Techonologies from "./techonologies";
 import HomePage from "./HomePage";
 
+
 function App() {
   return (
     <div>

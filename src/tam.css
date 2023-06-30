@@ -7,14 +7,85 @@
     display: flex;
     /* text-align: center; */
     justify-content: center;
-    margin-left: 100px;
-    margin-right: 100px;
+    /* margin-left: 100px;
+    margin-right: 100px; */
     padding:"10px" ;
 }
 
 .ResourcesCardBoxL{
-    padding: 40px;
+    padding: 30px;
 }
+
+.btn {
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    background: blue;
+    transition: .3s linear;
+    z-index: -1;
+    /* color: #fff; */
+}
+
+.btn:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.btn:hover {
+    color: #fff;
+}
+    /* padding: 40px;
+} */
+
+.button {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: block;
+  background: none repeat scroll 0 0 transparent;
+  height: 2px;
+  width: 0;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+
+.button:hover::after {
+  width: 100%;
+  left: 0;
+
+  background: linear-gradient(to left, #f69ec4, #f9dd94 100%);
+}
+
+.button:hover {
+  color: whitesmoke;
+}
+
+ .scrollable-content {
+  scrollbar-color:#d515b4 #94bbe9;
+
+  scrollbar-width:   initial 200px;
+} 
+
 .preloader {
     position: fixed;
     top: 0;

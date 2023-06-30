@@ -13,10 +13,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import HomeIcon from "@mui/icons-material/Home";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import InfoIcon from "@mui/icons-material/Info";
+
 import Techonologies from "./techonologies";
 import Home from "./Homeimage";
 import InfoStream1 from "./InfoStream1";
@@ -31,26 +28,26 @@ import Logo1 from './image/Logo1.png';
 import HomePage from "./HomePage";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
-
+import "./Image.css"; 
 
 const drawerWidth = 240;
 const navItems = [
-  { label: " Home", link: "/", icon: <HomeIcon color="primary" /> },
+  { label: " Home", link: "/",   },
   {
     label: "InfoStream",
     link: "/infostream",
-    icon: <AccountCircleIcon color="primary" />,
+
   },
   {
     label: "Technologies",
     link: "/tecnologies",
-    icon: <AddShoppingCartIcon color="primary" />,
+
   },
-  { label: "Resource", link: "/resource", icon: <InfoIcon color="primary" /> },
-  { label: "Portfolio", link: "/portfolio", icon: <InfoIcon color="primary" /> },
-  { label: "Testimonial", link: "/testimonial", icon: <InfoIcon color="primary" /> },
-  { label: "Contact Us", link: "/contact us", icon: <InfoIcon color="primary" /> },
-  { label: "About Us", link: "/about", icon: <InfoIcon color="primary" /> },
+  { label: "Resource", link: "/resource"  },
+  { label: "Portfolio", link: "/portfolio"  },
+  { label: "Testimonial", link: "/testimonial"  },
+  { label: "Contact Us", link: "/contact us" },
+  { label: "About Us", link: "/about" },
 ];
 
 const Main = styled("main")(({ theme, open }) => ({
@@ -94,13 +91,13 @@ export default function Drawers() {
   };
 
   return (
-    <Container>
-      <AppBar position="static" >
+    <Container className="scrollable-content">
+      <AppBar position="static">
         <Toolbar>
           <Title
             // variant="h6"
             component="div"
-            // paddingTop="10px"
+            paddingTop="10px"
             color="yellowgreen"
             display="flex"
             // backgroundcolor="red"
@@ -124,8 +121,11 @@ export default function Drawers() {
           </Title>
           <Box sx={{ display:mlist}}>
             {navItems.map((item) => (
-              <Button key={item.label} sx={{ color: "#ffff" }}>
-                {item.icon}
+              <Button
+                className="button"
+                key={item.label}
+                sx={{ color: "#ffff", padding: "8px" }}
+              >
                 <ListItemText>{item.label}</ListItemText>
               </Button>
             ))}
@@ -144,7 +144,7 @@ export default function Drawers() {
 
       <Main>
         {/* <Home /> */}
-        <HomePage/>
+        <HomePage />
         <InfoStream1 />
         <Techonologies />
         <Resource />
@@ -152,7 +152,7 @@ export default function Drawers() {
         <Divider sx={{ margin: "10px" }} />
         <Testimonial />
         <Contact />
-        <About/>
+        <About />
       </Main>
 
       <Drawer

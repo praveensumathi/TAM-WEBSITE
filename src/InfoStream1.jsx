@@ -143,13 +143,7 @@ function InfoStream1() {
                     {item.title}
                   </Typography>
                   <Typography paragraph>{item.discription}</Typography>
-                  <Button
-                    className="btn"
-                    variant="text"
-                    sx={{ float: "right", marginBottom: "10px" }}
-                  >
-                    View More
-                  </Button>
+                <Button className="btn"  variant="text" sx={{float:"right",marginBottom:"10px"}} >View More</Button>
                 </Container>
               </Card>
             </Container>

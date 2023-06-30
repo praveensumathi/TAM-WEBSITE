@@ -97,85 +97,96 @@ export default function Resource() {
   ];
 
   return (
-    <Box sx={{ marginBottom: "15px",padding:"30px" }}>
-      <Typography variant="h5">
+    <Box sx={{ marginBottom: "15px", padding: "30px" }}>
+      <Typography
+        variant="h5"
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          fontStyle: "italic",
+        }}
+      >
         <b>Resources</b>
       </Typography>
-      <Box >
-        <Slider {...settings}
+      <Box>
+        <Slider
+          {...settings}
           className={isSmallScreen ? "portfolioBoxM" : "portfolioBoxL"}
->
-        {imageURL.map((item) => {
-          return (
-            <Box className={isSmallScreen ? "ResourcesCardBoxM" : "ResourcesCardBoxL"}
->
-              <Card
-                key={item.id}
-                sx={{
-                  zIndex: 3,
-                  backgroundColor: "rgba(242, 244, 245,0.4)",
-                  backgroundBlendMode: "color",
-                  backgroundPosition: "center",
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                  borderRadius: "16px"
-                }}
+        >
+          {imageURL.map((item) => {
+            return (
+              <Box
+                className={
+                  isSmallScreen ? "ResourcesCardBoxM" : "ResourcesCardBoxL"
+                }
               >
-                <Container
+                <Card
+                  key={item.id}
                   sx={{
-                    backgroundColor: "rgba(26, 182, 235,0.5)",
-                    backgroundBlendMode: "darken",
+                    zIndex: 3,
+                    backgroundColor: "rgba(242, 244, 245,0.4)",
+                    backgroundBlendMode: "color",
+                    backgroundPosition: "center",
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                    borderRadius: "16px",
                   }}
                 >
-                  <Typography
-                    variant="h5"
+                  <Container
                     sx={{
-                      fontFamily: "cursive",
-                      fontWeight: "900",
-                      padding: "4px",
+                      backgroundColor: "rgba(26, 182, 235,0.5)",
+                      backgroundBlendMode: "darken",
                     }}
                   >
-                    {item.title}
+                    <Typography
+                      variant="h5"
+                      sx={{
+                        fontFamily: "cursive",
+                        fontWeight: "900",
+                        padding: "4px",
+                      }}
+                    >
+                      {item.title}
+                    </Typography>
+                  </Container>
+                  <Divider
+                    sx={{
+                      backgroundColor: "rgba(6, 150, 199)",
+                      padding: "1px",
+                    }}
+                  />
+                  <Box
+                    component="img"
+                    src={item.img}
+                    alt="Failed"
+                    sx={{ width: "100%", height: "20vh" }}
+                  />
+                  <Typography
+                    paragraph
+                    sx={{
+                      fontSize: 20,
+                      textAlign: "center",
+                      padding: "10px",
+                      fontWeight: "700",
+                      // zIndex: 2,
+                    }}
+                  >
+                    {item.description}
                   </Typography>
-                </Container>
-                <Divider
-                  sx={{
-                    backgroundColor: "rgba(6, 150, 199)",
-                    padding: "1px",
-                  }}
-                />
-                <Box
-                  component="img"
-                  src={item.img}
-                  alt="Failed"
-                  sx={{ width: "100%", height: "20vh" }}
-                />
-                <Typography
-                  paragraph
-                  sx={{
-                    fontSize: 20,
-                    textAlign: "center",
-                    padding: "10px",
-                    fontWeight: "700",
-                    // zIndex: 2,
-                  }}
-                >
-                  {item.description}
-                </Typography>
-                <Box
-                  justify="flex-end"
-                  sx={{
-                    display: "flex",
-                    justifyContent: "center",
-                    marginBottom: "5px",
-                  }}
-                >
-                  <Button variant="contained">Learn More</Button>
-                </Box>
-              </Card>
-            </Box>
-          );
-        })}
+                  <Box
+                    justify="flex-end"
+                    sx={{
+                      display: "flex",
+                      justifyContent: "center",
+                      marginBottom: "5px",
+                    }}
+                  >
+                    <Button variant="contained">Learn More</Button>
+                  </Box>
+                </Card>
+              </Box>
+            );
+          })}
         </Slider>
       </Box>
     </Box>

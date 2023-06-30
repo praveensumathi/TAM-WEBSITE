@@ -38,7 +38,7 @@ function Testimonial() {
     },
   ];
   return (
-    <Container>
+    <Container sx={{paddingBottom:"50px"}}>
       <Typography
         variant="h5"
         sx={{ display: "flex", justifyContent: "center", marginBottom: "20px",fontStyle:"italic"}}

@@ -5,6 +5,7 @@ import imgcss from './image/imgcss.png'
 import imgjs from './image/imgjs.png'
 import imgnode from './image/imgnode.jpg'
 import imgreact from './image/imgreact.png'
+import cimg from './image/contactimg.png'
 import Marquee from "react-fast-marquee";
 
 

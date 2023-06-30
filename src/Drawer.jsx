@@ -27,10 +27,11 @@ import About from "./About";
 import Portfolio from "./Portfolio";
 import { Divider } from "@mui/material";
 import Logo2 from './image/Logo2.png';
-// import Logo1 from './image/Logo1.png';
+import Logo1 from './image/Logo1.png';
 import HomePage from "./HomePage";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
+
 
 const drawerWidth = 240;
 const navItems = [
@@ -94,7 +95,7 @@ export default function Drawers() {
 
   return (
     <Container>
-      <AppBar position="static">
+      <AppBar position="static" >
         <Toolbar>
           <Title
             // variant="h6"
@@ -109,7 +110,7 @@ export default function Drawers() {
           >
             <Box
               component="img"
-              src={Logo2}
+              src={Logo1}
               sx={{
                 height: "40px",
                 width: "40px",
@@ -172,7 +173,16 @@ export default function Drawers() {
             component="div"
             sx={{ flexGrow: 1, display: "flex", alignItems: "center" }}
           >
-            <AttractionsIcon sx={{ padding: "4px" }} />
+            <Box
+              component="img"
+              src={Logo1}
+              sx={{
+                height: "40px",
+                width: "40px",
+                borderRadius: "50%",
+                // backgroundColor: "black",
+              }}
+            />
             Tam Tree
           </Typography>
           <IconButton onClick={handleRightDrawerClose}>

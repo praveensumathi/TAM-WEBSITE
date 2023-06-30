@@ -7,11 +7,39 @@
     display: flex;
     /* text-align: center; */
     justify-content: center;
-    margin-left: 100px;
-    margin-right: 100px;
+    /* margin-left: 100px;
+    margin-right: 100px; */
     padding:"10px" ;
 }
 
 .ResourcesCardBoxL{
-    padding: 40px;
+    padding: 30px;
+}
+
+.btn {
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    background: blue;
+    transition: .3s linear;
+    z-index: -1;
+    /* color: #fff; */
+}
+
+.btn:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.btn:hover {
+    color: #fff;
 }

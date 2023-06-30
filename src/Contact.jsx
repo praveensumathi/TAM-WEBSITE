@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { TextField, Button, Typography } from '@mui/material';
+import { TextField, Button, Typography, Box } from '@mui/material';
 import cimg from './image/contactimg.png';
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
@@ -39,7 +39,7 @@ const Contact = () => {
     };
 
     return (
-      <div className="img" style={backgroundStyle}>
+      <Box className="img" style={backgroundStyle}>
         <Typography variant="h5">Contact Us</Typography>
         <div
           style={{
@@ -115,7 +115,7 @@ const Contact = () => {
             </Button>
           </div>
         </div>
-      </div>
+      </Box>
     );
 };
 

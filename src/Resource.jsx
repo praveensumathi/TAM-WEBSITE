@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
-export default function App() {
+export default function Resource() {
   const settings = {
     fade: true,
     infinite: true,
@@ -53,17 +53,18 @@ export default function App() {
 
   return (
     <Container>
-      <Typography sx={{ padding: "20px" }}>
-        <b>Resources</b>
-      </Typography>
+        <Typography sx={{ padding: "20px" }}>
+          <b>Resources</b>
+        </Typography>
+      
       <Slider {...settings}>
         {imageURL.map((item) => {
           return (
             <Card
               key={item.id}
               sx={{
-                width: "80%",
-                height: "50vh",
+                // width: "80%",
+                // height: "50vh",
                 backgroundImage: `url(${item.img})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
@@ -71,16 +72,19 @@ export default function App() {
                 borderRadius: "16px",
               }}
             >
-              <Typography variant="h5" sx={{ mt: 2, padding: "4px" }}>
+               <Container sx={{ backgroundColor: "pink"  ,fontSize:500 ,padding:"4px ", paddingLeft:"7px"}}>
+              <Typography variant="h5" >
                 {item.title}
               </Typography>
+              </Container>
               <Typography
                 paragraph
                 sx={{
                   fontSize: 20,
                   textAlign: "center",
-                  padding: "60px",
+                  padding: "40px",
                   zIndex: 2,
+                  
                 }}
               >
                 {item.description}

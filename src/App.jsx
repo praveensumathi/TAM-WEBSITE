@@ -11,18 +11,24 @@ import Drawer from "./Drawer";
 import Contact from "./Contact";
 import Home from "./Homeimage";
 import Techonologies from "./techonologies";
-
 function App() {
   return (
     <div>
-      <CssBaseline/> 
+      <CssBaseline /> 
+      
       <Drawer />
-      <Home />
+      {/* <Home />
       <InfoStream1 />
       <Resource/>
       <Testimonial />
       <Contact />
-      <About/>
+      <About/> */}
+      {/* <Home /> */}
+      {/* <InfoStream1 /> */}
+      {/* <Resource/> */}
+      {/* <Testimonial /> */}
+      {/* <Contact /> */}
+      {/* <About/> */}
     </div>
   );
 }

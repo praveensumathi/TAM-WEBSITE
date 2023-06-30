@@ -1,5 +1,5 @@
 import Resource from "./Resource";
-import React from "react";
+import React, { useEffect, useState } from "react";
 // import Drawer from "./Drawer";
 import InfoStream1 from "./InfoStream1";
 import Testimonial from "./Testimonial";
@@ -10,21 +10,27 @@ import Contact from "./Contact";
 import Home from "./Homeimage";
 import Techonologies from "./techonologies";
 import HomePage from "./HomePage";
+import Preloader from "./PreLoader";
 
 function App() {
+   const [isLoading, setIsLoading] = useState(true);
+
+   useEffect(() => {
+     setTimeout(() => {
+       setIsLoading(false);
+     }, 1500);
+   }, []);
   return (
-    <div>
-      <CssBaseline />
-      <Drawer />
-      {/* <HomePage/> */}
-      {/* <Home /> */}
-      {/* <InfoStream1 /> */}
-      {/* <Resource/> */}
-      {/* <Testimonial /> */}
-      {/* <Contact /> */}
-      {/* <About/> */}
+      <div>
+        <CssBaseline />
+      {isLoading ? (
+        <Preloader />
+      ) : (
+        <div>
+          <Drawer />
+        </div>
+      )}
     </div>
   );
-}
-
+};
 export default App;

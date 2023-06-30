@@ -10,12 +10,13 @@ function Testimonial() {
     const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const card = isSmallScreen ? "auto" : "40vh";
+  const ld = isSmallScreen ? 1 : 2;
   const settings = {
     //    fade:true,
     dots: true,
     infinite: true,
     speed: 1000,
-    slidesToShow: 1,
+    slidesToShow: ld,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -54,8 +55,8 @@ function Testimonial() {
       <Slider {...settings} style={{ padding: "10px" }}>
         {clinet.map((item) => {
           return (
-            <Container>
-              <Card key={item.id} sx={{ borderRadius: "20px", boxShadow: 3,height:card }}>
+            <Box>
+              <Card key={item.id} sx={{ borderRadius: "20px", boxShadow: 3,height:card ,overflow:"hidden"}}>
                 <Container sx={{display:"flex",gap:"20px",marginBottom:"20px",marginTop:"10px"}}>
                   <Box
                     component="img"
@@ -75,7 +76,7 @@ function Testimonial() {
                   <Typography paragraph>{item.command}</Typography>
                 </Container>
               </Card>
-            </Container>
+            </Box>
           );
         })}
       </Slider>

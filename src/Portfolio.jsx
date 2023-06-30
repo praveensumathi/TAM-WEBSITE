@@ -47,19 +47,26 @@ export default function Portfolio() {
   ];
 
   return (
-      <Box sx={{ marginBottom: "15px",padding:"30px" }}>
-      <Typography variant="h5">
+    <Box sx={{ marginBottom: "15px", padding: "30px" }}>
+      <Typography
+        variant="h5"
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          marginBottom: "20px",
+          fontStyle: "italic",
+        }}
+      >
         <b>Portfolio</b>
       </Typography>
       <Box
         className={isSmallScreen ? "portfolioBoxM" : "portfolioBoxL"}
-
         sx={{
-          display: 'flex',
-          flexDirection: isSmallScreen ? 'column' : 'row',
-          flexWrap: 'wrap',
+          display: "flex",
+          flexDirection: isSmallScreen ? "column" : "row",
+          flexWrap: "wrap",
           gap: 4,
-          padding:"10px"
+          padding: "10px",
         }}
       >
         {image2.map((item, index) => (
@@ -103,8 +110,19 @@ export default function Portfolio() {
           </Card>
         ))}
       </Box>
-      <Box sx={{ textAlign: "center", justifyContent: "center", paddingTop: "20px" }}>
-        <Button variant='outlined' sx={{ borderRadius: "50px", boxShadow: "1px 1px 10px lightblue" }}>view More</Button>
+      <Box
+        sx={{
+          textAlign: "center",
+          justifyContent: "center",
+          paddingTop: "20px",
+        }}
+      >
+        <Button
+          variant="outlined"
+          sx={{ borderRadius: "50px", boxShadow: "1px 1px 10px lightblue" }}
+        >
+          view More
+        </Button>
       </Box>
     </Box>
   );

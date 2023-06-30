@@ -5,8 +5,16 @@ import Typography from "@mui/material/Typography";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
 import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
+
+
 
 function SampleNextArrow(props) {
+
+  // const matches = useMediaQuery("(min-width: 600px)");
+  
+
   const { className, style, onClick } = props;
   return (
     <ArrowForwardIosRoundedIcon
@@ -35,9 +43,6 @@ function SamplePrevArrow(props) {
         ...style,
         display: "block",
         color: "#91cbfa",
-        // backgroundColor:"ButtonShadow",
-        // // marginLeft: "5px",
-        // borderRadius: "50%",
         fontSize: "40px",
         zIndex: 1,
       }}
@@ -47,13 +52,17 @@ function SamplePrevArrow(props) {
 }
 
 function InfoStream1() {
+
+  const theme = useTheme();
+
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const ld = isSmallScreen?1:3;
   const settings = {
     // fade:true,
     // dots: true,
     infinite: true,
     speed: 1000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToShow: ld,
     prevArrow: <SamplePrevArrow />,
     nextArrow: <SampleNextArrow />,
     autoplay: true,
@@ -64,22 +73,29 @@ function InfoStream1() {
   const info = [
     {
       id: 1,
-      img: "https://picsum.photos/300/200",
+      img: "https://images.pexels.com/photos/3153198/pexels-photo-3153198.jpeg?auto=compress&cs=tinysrgb&w=600",
       title: "News 1",
       discription:
         "A few months back the Reserve Bank of India had asked NBFCs about their exposure to the edtech sector, fearing that trouble may be brewing in the space.",
     },
     {
       id: 2,
-      img: "https://picsum.photos/300/200",
+      img: "https://images.pexels.com/photos/1181673/pexels-photo-1181673.jpeg?auto=compress&cs=tinysrgb&w=600",
       title: "News 2",
       discription:
         "A few months back the Reserve Bank of India had asked NBFCs about their exposure to the edtech sector, fearing that trouble may be brewing in the space.",
     },
     {
       id: 3,
-      img: "https://picsum.photos/300/200",
+      img: "https://images.pexels.com/photos/5926389/pexels-photo-5926389.jpeg?auto=compress&cs=tinysrgb&w=600",
       title: "News 3",
+      discription:
+        "A few months back the Reserve Bank of India had asked NBFCs about their exposure to the edtech sector, fearing that trouble may be brewing in the space.",
+    },
+    {
+      id: 4,
+      img: "https://images.pexels.com/photos/3944377/pexels-photo-3944377.jpeg?auto=compress&cs=tinysrgb&w=600",
+      title: "News 4",
       discription:
         "A few months back the Reserve Bank of India had asked NBFCs about their exposure to the edtech sector, fearing that trouble may be brewing in the space.",
     },
@@ -87,9 +103,9 @@ function InfoStream1() {
 
   return (
     
-    <Container >
+    <Box sx={{marginBottom:"30px",padding:"30px"}}>
       <Typography variant="h5">
-        <b>Info_Stream:</b>
+        <b>InfoStream</b>
       </Typography>
       <Slider {...settings} style={{ padding: "10px" }}>
 
@@ -116,7 +132,7 @@ function InfoStream1() {
         })}
 
       </Slider>
-    </Container>
+    </Box>
   );
 }
 

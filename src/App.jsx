@@ -1,5 +1,3 @@
-
-
 import Resource from "./Resource";
 import React from "react";
 // import Drawer from "./Drawer";
@@ -11,18 +9,14 @@ import Drawer from "./Drawer";
 import Contact from "./Contact";
 import Home from "./Homeimage";
 import Techonologies from "./techonologies";
+import HomePage from "./HomePage";
+
 function App() {
   return (
     <div>
-      <CssBaseline /> 
-      
+      <CssBaseline />
       <Drawer />
-      {/* <Home />
-      <InfoStream1 />
-      <Resource/>
-      <Testimonial />
-      <Contact />
-      <About/> */}
+      {/* <HomePage/> */}
       {/* <Home /> */}
       {/* <InfoStream1 /> */}
       {/* <Resource/> */}

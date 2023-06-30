@@ -2,8 +2,14 @@ import React from "react";
 import { Container, Card, Box, Button, Divider } from "@mui/material";
 import Slider from "react-slick";
 import Typography from "@mui/material/Typography";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 
 function Testimonial() {
+
+    const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const card = isSmallScreen ? "auto" : "40vh";
   const settings = {
     //    fade:true,
     dots: true,
@@ -17,21 +23,21 @@ function Testimonial() {
   const clinet = [
     {
       id: 1,
-      img: "https://picsum.photos/300/200",
+      img: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=600",
       name: "Jerry",
       command:
         "Es ist unmöglich oder würde zu lange brauchen, diese Verzauberungen zu bekommen",
     },
     {
       id: 2,
-      img: "https://picsum.photos/300/200",
+      img: "https://images.pexels.com/photos/1090387/pexels-photo-1090387.jpeg?auto=compress&cs=tinysrgb&w=600",
       name: "John",
       command:
         "Es ist unmöglich oder würde zu lange brauchen, diese Verzauberungen zu bekommen",
     },
     {
       id: 3,
-      img: "https://picsum.photos/300/200",
+      img: "https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&w=600",
       name: "Petter",
       command:
         "Es ist unmöglich oder würde zu lange brauchen, diese Verzauberungen zu bekommen",
@@ -49,7 +55,7 @@ function Testimonial() {
         {clinet.map((item) => {
           return (
             <Container>
-              <Card key={item.id} sx={{ borderRadius: "20px", boxShadow: 3 }}>
+              <Card key={item.id} sx={{ borderRadius: "20px", boxShadow: 3,height:card }}>
                 <Container sx={{display:"flex",gap:"20px",marginBottom:"20px",marginTop:"10px"}}>
                   <Box
                     component="img"

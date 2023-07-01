@@ -7,6 +7,7 @@ import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRound
 import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
+import ScrollUnderline from "./ScrollUnderline";
 
 
 
@@ -113,17 +114,19 @@ function InfoStream1() {
 
   return (
     <Box sx={{ marginBottom: "30px", padding: "30px" }}>
-      <Typography
-        variant="h5"
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          marginBottom: "20px",
-          fontStyle: "italic",
-        }}
-      >
-        <b>InfoStream</b>
-      </Typography>
+      <ScrollUnderline>
+        <Typography
+          variant="h5"
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            marginBottom: "20px",
+            fontStyle: "italic",
+          }}
+        >
+          <b>InfoStream</b>
+        </Typography>
+      </ScrollUnderline>
       <Slider {...settings} style={{ padding: "10px" }}>
         {info.map((item) => {
           return (
@@ -143,7 +146,13 @@ function InfoStream1() {
                     {item.title}
                   </Typography>
                   <Typography paragraph>{item.discription}</Typography>
-                <Button className="btn"  variant="text" sx={{float:"right",marginBottom:"10px"}} >View More</Button>
+                  <Button
+                    className="btn"
+                    variant="text"
+                    sx={{ float: "right", marginBottom: "10px" }}
+                  >
+                    View More
+                  </Button>
                 </Container>
               </Card>
             </Container>

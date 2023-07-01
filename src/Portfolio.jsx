@@ -1,18 +1,38 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { Box, Button, CardActionArea, CardActions, } from '@mui/material';
-import Rating from '@mui/material/Rating';
-import { useMediaQuery } from '@mui/material';
-import "./tam.css"
+import React, { useState, useEffect ,useRef} from "react";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import { Box, Button, CardActionArea, CardActions } from "@mui/material";
+import Rating from "@mui/material/Rating";
+import { useMediaQuery } from "@mui/material";
+import "./tam.css";
+import ScrollUnderline from "./ScrollUnderline";
 
 export default function Portfolio() {
-  const isSmallScreen = useMediaQuery('(max-width: 600px)');
-  const isMediumScreen = useMediaQuery('(min-width: 651px) and (max-width: 960px)');
+  const isSmallScreen = useMediaQuery("(max-width: 600px)");
+  const isMediumScreen = useMediaQuery("(min-width: 651px) and (max-width: 960px)");
+  // const [isTitleVisible, setIsTitleVisible] = useState(false);
+  // const titleRef = useRef(null);
 
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (titleRef.current) {
+  //       const { top } = titleRef.current.getBoundingClientRect();
+  //       const windowHeight = window.innerHeight;
+  //       const titleOffset = 50;
+  //       const isTitleVisible = top <= windowHeight / 1.1 - titleOffset;
+  //       setIsTitleVisible(isTitleVisible);
+  //     }
+  //   };
 
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
+  
   const image2 = [
     {
       id: 1,
@@ -50,17 +70,21 @@ export default function Portfolio() {
 
   return (
     <Box sx={{ marginBottom: "15px", padding: "30px" }}>
-      <Typography
-        variant="h5"
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          marginBottom: "20px",
-          fontStyle: "italic",
-        }}
-      >
-        <b>Portfolio</b>
-      </Typography>
+      <ScrollUnderline>
+        <Typography
+          variant="h5"
+          // className={isTitleVisible ? "underline" : ""}
+          // ref={titleRef}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            marginBottom: "20px",
+            fontStyle: "italic",
+          }}
+        >
+          <b>Portfolio</b>
+        </Typography>
+      </ScrollUnderline>
       <Box
         className={isSmallScreen ? "portfolioBoxM" : "portfolioBoxL"}
         sx={{
@@ -76,7 +100,11 @@ export default function Portfolio() {
             key={item.id}
             sx={{
               marginBottom: "10px",
-              width: isSmallScreen ? "100%" : isMediumScreen ? "calc(50% - 20px)" : "calc(30% - 20px)",
+              width: isSmallScreen
+                ? "100%"
+                : isMediumScreen
+                ? "calc(50% - 20px)"
+                : "calc(30% - 20px)",
             }}
           >
             <CardActionArea>
@@ -98,7 +126,7 @@ export default function Portfolio() {
             </CardActionArea>
             <CardActions>
               <Button
-                className='btn'
+                className="btn"
                 size="small"
                 color="primary"
                 sx={{
@@ -113,8 +141,20 @@ export default function Portfolio() {
           </Card>
         ))}
       </Box>
-      <Box  sx={{ textAlign: "center", justifyContent: "center", paddingTop: "20px" }}>
-        <Button className='btn' variant='outlined' sx={{ borderRadius: "50px", boxShadow: "1px 1px 10px lightblue" }}>view More</Button>
+      <Box
+        sx={{
+          textAlign: "center",
+          justifyContent: "center",
+          paddingTop: "20px",
+        }}
+      >
+        <Button
+          className="btn"
+          variant="outlined"
+          sx={{ borderRadius: "50px", boxShadow: "1px 1px 10px lightblue" }}
+        >
+          view More
+        </Button>
       </Box>
     </Box>
   );

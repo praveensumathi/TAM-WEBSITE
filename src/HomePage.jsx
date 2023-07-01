@@ -6,9 +6,9 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 function HomePage() {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
-  const imgheight = isSmallScreen ? "auto" : "70vh";
-  const btn = isSmallScreen ? "auto" : "10vh";
-  const content = isSmallScreen ? "auto" : "25vh";
+  const imgheight = isSmallScreen ? "auto" :"100%";
+  // const btn = isSmallScreen ? "auto" : "5%";
+  const content = isSmallScreen ? "auto" : "15%";
   return (
     <Box sx={{ marginBottom: "15px"}}>
       <Box
@@ -24,11 +24,8 @@ function HomePage() {
         <Container
           style={{
             color: "white",
-            padding: "10px",
-            zIndex:1,
-            paddingTop: content,
-            paddingLeft:content,
-            
+            padding: content,
+            zIndex:50,
           }}
         >
           <Typography variant="h4">
@@ -39,14 +36,14 @@ function HomePage() {
             Services
           </Typography>
         </Container>
-        <Box sx={{ textAlign: "center", paddingTop: "20px" }}>
+        <Box sx={{ textAlign: "center"}}>
           <Button
             variant="contained"
             sx={{
               marginBottom: "10px",
               borderRadius: "20px",
               boxShadow: "1px 1px 1px lightblue",
-              marginTop:btn
+              // marginTop:btn
             }}
           >
             Learn More

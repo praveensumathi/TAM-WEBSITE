@@ -13,8 +13,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-
-import Techonologies from "./techonologies";
+import Techonologies from "./Techonologies";
 import Home from "./Homeimage";
 import InfoStream1 from "./InfoStream1";
 import Resource from "./Resource";
@@ -29,6 +28,7 @@ import HomePage from "./HomePage";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import "./Image.css"; 
+import "./tam.css";
 
 const drawerWidth = 240;
 const navItems = [
@@ -72,7 +72,7 @@ const Title = styled(Typography)({
 });
 const Container = styled("div")({
   width: "100%",
-  height: "100vh",
+  height: "100%",
 });
 export default function Drawers() {
    const theme = useTheme();
@@ -124,7 +124,7 @@ export default function Drawers() {
               <Button
                 className="button"
                 key={item.label}
-                sx={{ color: "#ffff", padding: "8px" }}
+                sx={{ color: "#ffff",marginLeft:"5px"}}
               >
                 <ListItemText>{item.label}</ListItemText>
               </Button>

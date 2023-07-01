@@ -4,7 +4,7 @@ import { TextField, Button, Typography, Box } from '@mui/material';
 import cimg from './image/contactimg.png';
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
-
+import ScrollUnderline from './ScrollUnderline';
 
 const Contact = () => {
    const theme = useTheme();
@@ -39,18 +39,20 @@ const Contact = () => {
 
     return (
       <Box className="img" style={backgroundStyle}>
-        <Typography
-          variant="h5"
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            marginBottom: "20px",
-            fontStyle: "italic",
-            color:'white'
-          }}
-        >
-          Contact Us
-        </Typography>
+        <ScrollUnderline>
+          <Typography
+            variant="h5"
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              marginBottom: "20px",
+              fontStyle: "italic",
+              color: "white",
+            }}
+          >
+            Contact Us
+          </Typography>
+        </ScrollUnderline>
         <div
           style={{
             padding: field,

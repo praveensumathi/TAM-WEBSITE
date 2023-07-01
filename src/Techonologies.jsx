@@ -7,25 +7,28 @@ import imgnode from './image/imgnode.jpg'
 import imgreact from './image/imgreact.png'
 import cimg from './image/contactimg.png'
 import Marquee from "react-fast-marquee";
-import { Typography ,Box} from '@mui/material'
+import { Typography, Box } from '@mui/material';
+import ScrollUnderline from './ScrollUnderline'
 
 
 
 function Techonologies() {
     return (
       <Box sx={{ marginBottom: "15px", padding: "30px" }}>
-        <Typography
-          variant="h5"
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            marginBottom: "20px",
-            fontStyle: "italic",
-            margin:"30px"
-          }}
-        >
-          <b>Techonologies</b>
-        </Typography>
+        <ScrollUnderline>
+          <Typography
+            variant="h5"
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              marginBottom: "20px",
+              fontStyle: "italic",
+              margin: "30px",
+            }}
+          >
+            <b>Techonologies</b>
+          </Typography>
+        </ScrollUnderline>
         <Box sx={{ paddingRight: "15px", paddingLeft: "15px" }}>
           <Marquee>
             <img

@@ -1,14 +1,11 @@
 import { Box, Button, Container, Typography } from "@mui/material";
 import React from "react";
-import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 function HomePage() {
-  const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
-  const imgheight = isSmallScreen ? "auto" :"100%";
-  // const btn = isSmallScreen ? "auto" : "5%";
-  const content = isSmallScreen ? "auto" : "15%";
+  const isSmallScreen = useMediaQuery("(max-width:600px)");
+  const imgheight = isSmallScreen ? "100%" :"100%";
+  const content = isSmallScreen ? "4%" : "15%";
   return (
     <Box sx={{ marginBottom: "15px"}}>
       <Box

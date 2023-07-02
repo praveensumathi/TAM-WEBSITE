@@ -56,10 +56,10 @@ function InfoStream1() {
   const theme = useTheme();
 
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
-  const ld = isSmallScreen?1:3;
+  const ld = isSmallScreen ? 1 : 3;
+  
   const settings = {
-    // fade:true,
-    // dots: true,
+    className: "center",
     infinite: true,
     speed: 1000,
     slidesToShow: ld,
@@ -67,6 +67,16 @@ function InfoStream1() {
     nextArrow: <SampleNextArrow />,
     autoplay: true,
     autoplaySpeed: 2000,
+    centerMode: true,
+    centerPadding: "0px",
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
   
 
@@ -102,35 +112,43 @@ function InfoStream1() {
   ];
 
   return (
-    
-    <Box sx={{marginBottom:"30px",padding:"30px"}}>
-      <Typography variant="h5">
-        <b>InfoStream</b>
+    <Box sx={{ marginBottom: "30px", padding: "30px" }} data-aos="fade-left" data-aos-duration="2000" >
+      <Typography
+        variant="h5"
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          marginBottom: "20px",
+          fontStyle: "italic",
+        }}
+      >
+        <b>InfoStreamk</b>
       </Typography>
       <Slider {...settings} style={{ padding: "10px" }}>
-
         {info.map((item) => {
           return (
             <Container>
-              <Card key={item.id} sx={{ borderRadius:"20px",boxShadow:3 }}>
-                  <Box
-                    component="img"
-                    src={item.img}
-                    alt="Failed"
-                    sx={{ width: "100%", height: "30vh" }}
-                  />
+              <Card key={item.id} sx={{ borderRadius: "20px", boxShadow: 3 }}>
+                <Box
+                  component="img"
+                  src={item.img}
+                  alt="Failed"
+                  sx={{ width: "100%", height: "30vh" }}
+                />
                 <Container sx={{ marginTop: "10px" }}>
-                  <Typography variant="h5" sx={{ marginBottom: "10px" ,color:"navy"}}>
+                  <Typography
+                    variant="h5"
+                    sx={{ marginBottom: "10px", color: "navy" }}
+                  >
                     {item.title}
                   </Typography>
                   <Typography paragraph>{item.discription}</Typography>
-                <Button variant="text" sx={{float:"right",marginBottom:"10px"}} >View More</Button>
+                <Button className="btn"  variant="text" sx={{float:"right",marginBottom:"10px"}} >View More</Button>
                 </Container>
               </Card>
             </Container>
           );
         })}
-
       </Slider>
     </Box>
   );

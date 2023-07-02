@@ -31,12 +31,15 @@ function HomePage() {
             
           }}
         >
-          <Typography variant="h4">
+          <Typography variant="h4" data-aos="fade-up"
+            data-aos-duration="3000" >
             Transforming Ideas into Digital Masterpieces
-          </Typography>
-          <Typography variant="h6" sx={{ padding: "10px" }}>
             Unleash Your Online Potential with our Exceptional Web Development
             Services
+          </Typography>
+          <Typography   sx={{ padding: "10px" }}>
+            <p> Unleash Your Online Potential with our Exceptional Web Development
+              Services</p>
           </Typography>
         </Container>
         <Box sx={{ textAlign: "center", paddingTop: "20px" }}>

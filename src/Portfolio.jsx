@@ -10,6 +10,8 @@ import "./tam.css"
 
 export default function Portfolio() {
   const isSmallScreen = useMediaQuery('(max-width: 600px)');
+  const isMediumScreen = useMediaQuery('(min-width: 651px) and (max-width: 960px)');
+
 
   const image2 = [
     {
@@ -47,19 +49,26 @@ export default function Portfolio() {
   ];
 
   return (
-      <Box sx={{ marginBottom: "15px",padding:"15px" }}>
-      <Typography variant="h5">
+    <Box sx={{ marginBottom: "15px", padding: "30px" }} data-aos="fade-right" data-aos-duration="2000" >
+      <Typography
+        variant="h5"
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          marginBottom: "20px",
+          fontStyle: "italic",
+        }}
+      >
         <b>Portfolio</b>
       </Typography>
       <Box
         className={isSmallScreen ? "portfolioBoxM" : "portfolioBoxL"}
-
         sx={{
-          display: 'flex',
-          flexDirection: isSmallScreen ? 'column' : 'row',
-          flexWrap: 'wrap',
+          display: "flex",
+          flexDirection: isSmallScreen ? "column" : "row",
+          flexWrap: "wrap",
           gap: 4,
-          padding:"10px"
+          padding: "10px",
         }}
       >
         {image2.map((item, index) => (
@@ -67,7 +76,7 @@ export default function Portfolio() {
             key={item.id}
             sx={{
               marginBottom: "10px",
-              width: isSmallScreen ? "100%" : "calc(50% - 20px)",
+              width: isSmallScreen ? "100%" : isMediumScreen ? "calc(50% - 20px)" : "calc(30% - 20px)",
             }}
           >
             <CardActionArea>
@@ -81,7 +90,7 @@ export default function Portfolio() {
                 <Typography gutterBottom variant="h5" component="div">
                   {item.title}
                 </Typography>
-                <Rating name="size-medium" defaultValue={item.star} />
+                <Rating name="read-only" defaultValue={item.star} readOnly />
                 <Typography variant="body2" color="text.secondary">
                   {item.description}
                 </Typography>
@@ -89,6 +98,7 @@ export default function Portfolio() {
             </CardActionArea>
             <CardActions>
               <Button
+                className='btn'
                 size="small"
                 color="primary"
                 sx={{
@@ -103,8 +113,8 @@ export default function Portfolio() {
           </Card>
         ))}
       </Box>
-      <Box sx={{ textAlign: "center", justifyContent: "center", paddingTop: "20px" }}>
-        <Button variant='outlined' sx={{ borderRadius: "50px", boxShadow: "1px 1px 10px lightblue" }}>view More</Button>
+      <Box  sx={{ textAlign: "center", justifyContent: "center", paddingTop: "20px" }}>
+        <Button className='btn' variant='outlined' sx={{ borderRadius: "50px", boxShadow: "1px 1px 10px lightblue" }}>view More</Button>
       </Box>
     </Box>
   );

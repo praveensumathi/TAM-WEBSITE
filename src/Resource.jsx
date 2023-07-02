@@ -12,6 +12,7 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { shadows } from "@mui/system";
 import { Translate } from "@mui/icons-material";
 import { useMediaQuery } from '@mui/material';
+import ScrollUnderline from "./ScrollUnderline";
 
 
 
@@ -99,24 +100,30 @@ export default function Resource() {
   ];
 
   return (
-    <div data-aos="fade-in" data-aos-duration="1000">
-      <Typography
-        variant="h5"
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          fontStyle: "italic",
-        }}
-      >
-        <b>Resources</b>
-      </Typography>
-      <Box >
-        <Slider {...settings}
-        // className={isSmallScreen ? "portfolioBoxM" : "portfolioBoxL"}
+    <Box sx={{ marginBottom: "15px", padding: "30px" }}>
+      <ScrollUnderline>
+        <Typography
+          variant="h5"
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            fontStyle: "italic",
+          }}
+        >
+          <b>Resources</b>
+        </Typography>
+      </ScrollUnderline>
+      <Box>
+        <Slider
+          {...settings}
+          // className={isSmallScreen ? "portfolioBoxM" : "portfolioBoxL"}
         >
           {imageURL.map((item) => {
             return (
-              <Box className={isSmallScreen ? "ResourcesCardBoxM" : "ResourcesCardBoxL"}
+              <Box
+                className={
+                  isSmallScreen ? "ResourcesCardBoxM" : "ResourcesCardBoxL"
+                }
               >
                 <Card
                   key={item.id}
@@ -127,7 +134,7 @@ export default function Resource() {
                     backgroundPosition: "center",
                     backgroundSize: "cover",
                     backgroundRepeat: "no-repeat",
-                    borderRadius: "16px"
+                    borderRadius: "16px",
                   }}
                 >
                   <Container
@@ -168,7 +175,7 @@ export default function Resource() {
                       padding: "10px",
                       fontWeight: "700",
                       height: "300px",
-                      overflow: "hidden"
+                      overflow: "hidden",
                       // zIndex: 2,
                     }}
                   >
@@ -182,7 +189,7 @@ export default function Resource() {
                       marginBottom: "5px",
                     }}
                   >
-                    <Button variant="contained" >Learn More</Button>
+                    <Button variant="contained">Learn More</Button>
                   </Box>
                 </Card>
               </Box>
@@ -190,6 +197,6 @@ export default function Resource() {
           })}
         </Slider>
       </Box>
-    </div>
+    </Box>
   );
 }

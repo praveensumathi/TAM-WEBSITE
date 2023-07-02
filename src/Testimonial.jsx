@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import Typography from "@mui/material/Typography";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
+import ScrollUnderline from "./ScrollUnderline";
 
 function Testimonial() {
 
@@ -45,34 +46,56 @@ function Testimonial() {
     },
   ];
   return (
-    <Container sx={{paddingBottom:"50px"}}>
-      <Typography
-        variant="h5"
-        sx={{ display: "flex", justifyContent: "center", marginBottom: "20px",fontStyle:"italic"}}
-      >
-        <b>Testimonial</b>
-      </Typography>
+    <Container sx={{ paddingBottom: "50px" }}>
+      <ScrollUnderline>
+        <Typography
+          variant="h5"
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            marginBottom: "20px",
+            fontStyle: "italic",
+          }}
+        >
+          <b>Testimonial</b>
+        </Typography>
+      </ScrollUnderline>
       <Slider {...settings} style={{ padding: "10px" }}>
         {clinet.map((item) => {
           return (
             <Box>
-              <Card key={item.id} sx={{ borderRadius: "20px", boxShadow: 3,height:card ,overflow:"hidden"}}>
-                <Container sx={{display:"flex",gap:"20px",marginBottom:"20px",marginTop:"10px"}}>
+              <Card
+                key={item.id}
+                sx={{
+                  borderRadius: "20px",
+                  boxShadow: 3,
+                  height: card,
+                  overflow: "hidden",
+                }}
+              >
+                <Container
+                  sx={{
+                    display: "flex",
+                    gap: "20px",
+                    marginBottom: "20px",
+                    marginTop: "10px",
+                  }}
+                >
                   <Box
                     component="img"
                     src={item.img}
                     alt="Failed"
-                    sx={{ borderRadius: "50%" ,width:"70px",height:"70px"}}
+                    sx={{ borderRadius: "50%", width: "70px", height: "70px" }}
                   />
-                    <Typography
-                      variant="h6"
-                      sx={{ marginBottom: "10px", color: "navy" }}
-                    >
-                     Name: {item.name}
-                    </Typography>
-                      </Container>
-                      <Divider></Divider>
-                  <Container sx={{ marginBottom: "20px" ,marginTop:"20px"}}>
+                  <Typography
+                    variant="h6"
+                    sx={{ marginBottom: "10px", color: "navy" }}
+                  >
+                    Name: {item.name}
+                  </Typography>
+                </Container>
+                <Divider></Divider>
+                <Container sx={{ marginBottom: "20px", marginTop: "20px" }}>
                   <Typography paragraph>{item.command}</Typography>
                 </Container>
               </Card>

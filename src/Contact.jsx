@@ -3,16 +3,16 @@ import React, { useState } from 'react';
 import { TextField, Button, Typography, Box } from '@mui/material';
 import cimg from './image/contactimg.png';
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { useTheme } from "@mui/material/styles";
-
+// import { useTheme } from "@mui/material/styles";
+import ScrollUnderline from './ScrollUnderline';
 
 const Contact = () => {
-   const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
-  const conheight = isSmallScreen ? "auto" : "90vh";
-  const field = isSmallScreen ? "auto" : "50px";
-  const fieldrl = isSmallScreen ? "auto" : "200px";
-  const btn = isSmallScreen ? "auto" : "80px";
+  //  const theme = useTheme();
+  const isSmallScreen = useMediaQuery("(max-width:600px)");
+  const conheight = isSmallScreen ? "100%" : "100%";
+  const field = isSmallScreen ? "0" : "50px";
+  const fieldrl = isSmallScreen ? "0" : "200px";
+  const btn = isSmallScreen ? "2%" : "5%";
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -39,18 +39,20 @@ const Contact = () => {
 
     return (
       <Box className="img" style={backgroundStyle}>
-        <Typography
-          variant="h5"
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            marginBottom: "20px",
-            fontStyle: "italic",
-            color:'white'
-          }}
-        >
-          Contact Us
-        </Typography>
+        <ScrollUnderline>
+          <Typography
+            variant="h5"
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              marginBottom: "20px",
+              fontStyle: "italic",
+              color: "white",
+            }}
+          >
+            Contact Us
+          </Typography>
+        </ScrollUnderline>
         <div
           style={{
             padding: field,
@@ -117,7 +119,6 @@ const Contact = () => {
               type="submit"
               variant="contained"
               color="primary"
-              // fullWidth
               onClick={handleSubmit}
               sx={{ textTransform: "none", marginTop: btn }}
             >

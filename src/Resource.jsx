@@ -88,14 +88,14 @@ export default function Resource() {
       img: "https://images.pexels.com/photos/11813187/pexels-photo-11813187.jpeg?auto=compress&cs=tinysrgb&w=600",
       title: "Testing",
       description:
-        "Frontend as a Service is a composable commerce solution that allows developers to use cloud-based modules to develop a fully performant eCommerce frontend",
+        "Testing in the context of software development refers to the process of verifying and validating a system or component to ensure that it meets the specified requirements. It involves executing the system or component with test cases to uncover any defects or errors.",
     },
     {
       id: 4,
       img: "https://media.istockphoto.com/id/1393858554/photo/relational-database-tables-with-server-room-and-datacenter-background-concept-of-database.jpg?b=1&s=612x612&w=0&k=20&c=wsc-TM8hTxr08jfnns_mWFyJ9vUMHFU19h7B1U7Xepw=",
       title: "Unique design",
       description:
-        "Back-end developers are the experts who build and maintain the mechanisms that process data and perform actions on websites. Unlike front-end developers, who control everything you can see on a website",
+        "Unique design refers to the creation of visually distinct and innovative designs that stand out from conventional or standard designs. It involves exploring creative and original approaches to visual elements, layout, color schemes, typography, and interactive elements.",
     },
   ];
 
@@ -152,9 +152,10 @@ export default function Resource() {
                     }}
                   >
                     <Typography
-                      variant="h5"
+                      variant="h6"
                       sx={{
                         fontFamily: "cursive",
+                        fontSize:"25px",
                         fontWeight: "900",
                         padding: "4px",
                       }}
@@ -197,7 +198,7 @@ export default function Resource() {
                       marginBottom: "5px",
                     }}
                   >
-                    <Button variant="contained">Learn More</Button>
+                    <Button variant="contained" className="btn">Learn More</Button>
                   </Box>
                 </Card>
               </Box>

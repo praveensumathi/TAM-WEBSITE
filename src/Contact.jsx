@@ -47,7 +47,6 @@ const Contact = () => {
               justifyContent: "center",
               marginBottom: "20px",
               fontStyle: "italic",
-              color: "white",
             }}
           >
             Contact Us
@@ -119,6 +118,7 @@ const Contact = () => {
               type="submit"
               variant="contained"
               color="primary"
+              className='btn'
               onClick={handleSubmit}
               sx={{ textTransform: "none", marginTop: btn }}
             >

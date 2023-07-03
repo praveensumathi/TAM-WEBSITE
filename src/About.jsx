@@ -1,4 +1,4 @@
-import { Box, Container, CssBaseline, Divider, Typography } from "@mui/material";
+import { Box, Container, CssBaseline, Divider, Typography,Link } from "@mui/material";
 import React from "react";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -76,7 +76,12 @@ function About() {
             <FacebookIcon sx={{ marginBottom: "10px" }} />
             <TwitterIcon />
             <YouTubeIcon />
-            <InstagramIcon />
+            <Link
+              href="https://instagram.com/jeevanand0508?igshid=ZDc4ODBmNjlmNQ=="
+              sx={{ color: "white" }}
+            >
+              <InstagramIcon />
+            </Link>
             <LinkedInIcon />
           </Box>
         </Container>

@@ -40,6 +40,7 @@ function HomePage() {
         <Box sx={{ textAlign: "center"}}>
           <Button
             variant="contained"
+            className="btn"
             sx={{
               marginBottom: "10px",
               borderRadius: "20px",

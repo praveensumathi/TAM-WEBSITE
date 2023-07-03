@@ -10,9 +10,49 @@ import Contact from "./Contact";
 import Home from "./Homeimage";
 import HomePage from "./HomePage";
 import Preloader from "./PreLoader";
+import { createTheme,ThemeProvider } from "@mui/material";
 
 
 function App() {
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: "#05fa5b",
+        contrastText: "#fff",
+        darker: "#053e85",
+      },
+      secondary: {
+        main: "#b3c4a5",
+      },
+    },
+    typography: {
+      h5: {
+        color: "#191de6",
+      },
+    },
+    components: {
+      MuiButton: {
+        styleOverrides: {
+          root: {
+            "&:hover": {
+              background: "#00bcd4",
+              contrastText: "#fff",
+            },
+          },
+        },
+      },
+      MuiTextField: {
+        styleOverrides: {
+          root: {
+            "&:hover": {
+              boxShadow: "1px 1px 10px #05fa5b",
+            },
+          },
+        },
+      },
+    },
+  });
+
    const [isLoading, setIsLoading] = useState(true);
 
    useEffect(() => {
@@ -21,13 +61,15 @@ function App() {
      }, 1500);
    }, []);
   return (
-      <div>
-        <CssBaseline />
+    <div>
+      <CssBaseline />
       {isLoading ? (
         <Preloader />
       ) : (
         <div>
-          <Drawer />
+          <ThemeProvider theme={theme}>
+            <Drawer />
+          </ThemeProvider>
         </div>
       )}
     </div>

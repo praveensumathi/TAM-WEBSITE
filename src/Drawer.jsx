@@ -29,6 +29,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import "./Image.css"; 
 import "./tam.css";
+// import {theme} from './Theme'
 
 const drawerWidth = 240;
 const navItems = [
@@ -91,7 +92,7 @@ export default function Drawers() {
   };
 
   return (
-    <Container className="scrollable-content">
+    <Container className="scrollable-content" >
       <AppBar position="static">
         <Toolbar>
           <Title
@@ -115,21 +116,22 @@ export default function Drawers() {
                 backgroundColor: "black",
               }}
             />
-            <Typography variant="h4" sx={{ fontFamily: "cursive" }}>
+            <Typography variant="h4"  sx={{ fontFamily: "cursive" ,color:"#d1fa05" }}>
               TamTree
             </Typography>
           </Title>
           <Box sx={{ display:mlist}}>
             {navItems.map((item) => (
-              <Button
+              <List
+                variant="h6"
                 className="button"
                 key={item.label}
-                sx={{ color: "#ffff",marginLeft:"5px"}}
+                sx={{ color: "#ffff",marginLeft:"20px",marginRight:"10px"}}
               >
                 <ListItemText>{item.label}</ListItemText>
-              </Button>
+              </List>
             ))}
-          </Box>
+          </Box>  
           <IconButton
             edge="end"
             color="inherit"

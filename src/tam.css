@@ -43,8 +43,8 @@
 .btn:hover {
     color: #fff;
 }
-    /* padding: 40px;
-} */
+
+/* /////////////////// NAVBAR ////////////////////// */
 
 .button {
   color: #fff;
@@ -84,6 +84,8 @@
   scrollbar-color:#d515b4 #94bbe9;
   scrollbar-width:   initial 200px;
 } 
+
+/* ////////////////////// PRELOADER ///////////////////////// */
 
 .preloader {
     position: fixed;
@@ -216,20 +218,30 @@ margin: 25px;
 }
 
 
-/* ////////////////////////////////////////// */
+/* ////////////////// UNDERLINE //////////////////////// */
 
 .underline {
         position: relative;
-        
 }
 .underline::before {
     content: "";
     position: absolute;
+    border-radius: 100px;
     left: 50%;
-    bottom: 0;
-    width: 12%;
-    height: 5px;
+    bottom: -2px;
+    width: 0;
+    height: 8px;
     transform: skew(-45deg) translateX(-50%);
-    background: rgb(241, 5, 5);
+    animation: underlineAnimation 1s forwards;
+    background-color: rgb(243, 50, 50);
     z-index: -1;
 }
+@keyframes underlineAnimation{
+    0% {
+            width: 0;
+        }
+    
+        100% {
+            width: 12%;
+        }
+    }

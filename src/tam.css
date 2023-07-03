@@ -80,10 +80,10 @@
   color: whitesmoke;
 }
 
- html {
+ /* html {
   scrollbar-color:#d515b4 #94bbe9;
-  scrollbar-width:   initial 200px;
-} 
+  scrollbar-width:   initial 200px; 
+}  */
 
 .preloader {
     position: fixed;

@@ -80,6 +80,7 @@
     background: linear-gradient(45deg, #0905fa, #fa055f);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    cursor: pointer;
 }
 
 .button:hover {
@@ -96,11 +97,11 @@
 }
 
 *::-webkit-scrollbar-track {
-    background: lightblue;
+    background: #ace0a8;
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: blue;
+    background-color: #0a7802;
     border-radius: 20px;
     /* border: 3px solid blue; */
 }
@@ -248,7 +249,7 @@ margin: 25px;
     position: absolute;
     border-radius: 100px;
     left: 50%;
-    bottom: -2px;
+    bottom: -10px;
     width: 0;
     height: 8px;
     transform: skew(-45deg) translateX(-50%);

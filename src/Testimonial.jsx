@@ -46,7 +46,8 @@ function Testimonial() {
     },
   ];
   return (
-    <Container sx={{ paddingBottom: "50px" }}>
+    <Container sx={{ paddingBottom: "50px" }} data-aos="fade-up" data-aos-easing="ease-out-cubic"
+      data-aos-duration="2000">
       <ScrollUnderline>
         <Typography
           variant="h5"

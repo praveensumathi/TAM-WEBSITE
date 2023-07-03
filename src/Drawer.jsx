@@ -27,7 +27,6 @@ import Logo1 from './image/Logo1.png';
 import HomePage from "./HomePage";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
-import "./Image.css"; 
 import "./tam.css";
 // import {theme} from './Theme'
 
@@ -92,7 +91,7 @@ export default function Drawers() {
   };
 
   return (
-    <Container className="scrollable-content" >
+    <Container className="scrollbar">
       <AppBar position="static">
         <Toolbar>
           <Title

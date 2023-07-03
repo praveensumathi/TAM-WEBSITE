@@ -38,7 +38,7 @@ const Contact = () => {
     };
 
     return (
-      <Box className="img" style={backgroundStyle}>
+      <Box className="img" style={backgroundStyle} >
         <ScrollUnderline>
           <Typography
             variant="h5"
@@ -58,6 +58,9 @@ const Contact = () => {
             paddingRight: fieldrl,
             paddingLeft: fieldrl,
           }}
+          data-aos="zoom-in"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="1000"
         >
           <TextField
             label="Name"

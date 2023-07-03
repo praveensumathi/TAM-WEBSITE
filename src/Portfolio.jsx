@@ -69,7 +69,7 @@ export default function Portfolio() {
   ];
 
   return (
-    <Box sx={{ marginBottom: "15px", padding: "30px" }}>
+    <Box sx={{ marginBottom: "15px", padding: "30px" }} data-aos="fade-left" data-aos-duration="2000">
       <ScrollUnderline>
         <Typography
           variant="h5"
@@ -118,7 +118,7 @@ export default function Portfolio() {
                 <Typography gutterBottom variant="h5" component="div">
                   {item.title}
                 </Typography>
-                <Rating name="size-medium" defaultValue={item.star} />
+                <Rating name="read-only" defaultValue={item.star} readOnly />
                 <Typography variant="body2" color="text.secondary">
                   {item.description}
                 </Typography>

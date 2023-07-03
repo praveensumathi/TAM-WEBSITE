@@ -1,19 +1,39 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { Box, Button, CardActionArea, CardActions, } from '@mui/material';
-import Rating from '@mui/material/Rating';
-import { useMediaQuery } from '@mui/material';
+import React, { useState, useEffect, useRef } from "react";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import { Box, Button, CardActionArea, CardActions } from "@mui/material";
+import Rating from "@mui/material/Rating";
+import { useMediaQuery } from "@mui/material";
 import "./tam.css";
-import "./Image.css";
-
+import ScrollUnderline from "./ScrollUnderline";
 
 export default function Portfolio() {
-  
-  const isSmallScreen = useMediaQuery('(max-width: 600px)');
- 
+  const isSmallScreen = useMediaQuery("(max-width: 600px)");
+  const isMediumScreen = useMediaQuery(
+    "(min-width: 651px) and (max-width: 960px)"
+  );
+  // const [isTitleVisible, setIsTitleVisible] = useState(false);
+  // const titleRef = useRef(null);
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (titleRef.current) {
+  //       const { top } = titleRef.current.getBoundingClientRect();
+  //       const windowHeight = window.innerHeight;
+  //       const titleOffset = 50;
+  //       const isTitleVisible = top <= windowHeight / 1.1 - titleOffset;
+  //       setIsTitleVisible(isTitleVisible);
+  //     }
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   const image2 = [
     {
@@ -50,32 +70,27 @@ export default function Portfolio() {
     },
   ];
 
-  window.addEventListener("scroll", function () {
-    var titleElement = document.querySelector(".title");
-    var scrollPosition = window.scrollY || document.documentElement.scrollTop;
-
-    if (scrollPosition > 0) {
-      titleElement.classList.add("underlined");
-    } else {
-      titleElement.classList.remove("underlined");
-    }
-  });
-  
   return (
-    <Box sx={{ marginBottom: "15px", padding: "30px" }}>
-      <Typography
-        variant="h5"
-        className="title"
-        // className={`${classes.title} ${trigger ? "underline" : ""}`}
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          marginBottom: "20px",
-          fontStyle: "italic",
-        }}
-      >
-        <b>Portfolio</b>
-      </Typography>
+    <Box
+      sx={{ marginBottom: "15px", padding: "30px" }}
+      data-aos="fade-left"
+      data-aos-duration="2000"
+    >
+      <ScrollUnderline>
+        <Typography
+          variant="h5"
+          // className={isTitleVisible ? "underline" : ""}
+          // ref={titleRef}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            marginBottom: "20px",
+            fontStyle: "italic",
+          }}
+        >
+          <b>Portfolio</b>
+        </Typography>
+      </ScrollUnderline>
       <Box
         className={isSmallScreen ? "portfolioBoxM" : "portfolioBoxL"}
         sx={{
@@ -91,7 +106,11 @@ export default function Portfolio() {
             key={item.id}
             sx={{
               marginBottom: "10px",
-              width: isSmallScreen ? "100%" : "calc(50% - 20px)",
+              width: isSmallScreen
+                ? "100%"
+                : isMediumScreen
+                ? "calc(50% - 20px)"
+                : "calc(30% - 20px)",
             }}
           >
             <CardActionArea>
@@ -105,7 +124,7 @@ export default function Portfolio() {
                 <Typography gutterBottom variant="h5" component="div">
                   {item.title}
                 </Typography>
-                <Rating name="size-medium" defaultValue={item.star} />
+                <Rating name="read-only" defaultValue={item.star} readOnly />
                 <Typography variant="body2" color="text.secondary">
                   {item.description}
                 </Typography>
@@ -113,6 +132,7 @@ export default function Portfolio() {
             </CardActionArea>
             <CardActions>
               <Button
+                className="btn"
                 size="small"
                 color="primary"
                 sx={{
@@ -135,6 +155,7 @@ export default function Portfolio() {
         }}
       >
         <Button
+          className="btn"
           variant="outlined"
           sx={{ borderRadius: "50px", boxShadow: "1px 1px 10px lightblue" }}
         >

@@ -8,7 +8,6 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Drawer from "./Drawer";
 import Contact from "./Contact";
 import Home from "./Homeimage";
-import Techonologies from "./techonologies";
 import HomePage from "./HomePage";
 import Preloader from "./PreLoader";
 

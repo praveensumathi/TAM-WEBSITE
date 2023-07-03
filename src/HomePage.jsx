@@ -1,14 +1,11 @@
 import { Box, Button, Container, Typography } from "@mui/material";
 import React from "react";
-import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 function HomePage() {
-  const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
-  const imgheight = isSmallScreen ? "auto" : "70vh";
-  const btn = isSmallScreen ? "auto" : "10vh";
-  const content = isSmallScreen ? "auto" : "25vh";
+  const isSmallScreen = useMediaQuery("(max-width:600px)");
+  const imgheight = isSmallScreen ? "100%" :"100%";
+  const content = isSmallScreen ? "4%" : "15%";
   return (
     <Box sx={{ marginBottom: "15px"}}>
       <Box
@@ -24,29 +21,30 @@ function HomePage() {
         <Container
           style={{
             color: "white",
-            padding: "10px",
-            zIndex:1,
-            paddingTop: content,
-            paddingLeft:content,
-            
+            padding: content,
+            zIndex:50,
           }}
         >
-          <Typography variant="h4">
+          <Typography variant="h4"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000" >
             Transforming Ideas into Digital Masterpieces
+           
           </Typography>
-          <Typography variant="h6" sx={{ padding: "10px" }}>
-            Unleash Your Online Potential with our Exceptional Web Development
-            Services
+          <Typography   sx={{ padding: "10px" }}>
+            <p> Unleash Your Online Potential with our Exceptional Web Development
+              Services</p>
           </Typography>
         </Container>
-        <Box sx={{ textAlign: "center", paddingTop: "20px" }}>
+        <Box sx={{ textAlign: "center"}}>
           <Button
             variant="contained"
             sx={{
               marginBottom: "10px",
               borderRadius: "20px",
               boxShadow: "1px 1px 1px lightblue",
-              marginTop:btn
+              // marginTop:btn
             }}
           >
             Learn More

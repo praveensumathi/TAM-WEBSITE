@@ -29,7 +29,7 @@ import Logo1 from './image/Logo1.png';
 import HomePage from "./HomePage";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
-import "./Image.css"; 
+import "./tam.css";
 
 const drawerWidth = 240;
 const navItems = [
@@ -74,7 +74,7 @@ const Title = styled(Typography)({
 
 const Container = styled("div")({
   width: "100%",
-  height: "100vh",
+  height: "100%",
 });
 export default function Drawers() {
    const theme = useTheme();
@@ -128,12 +128,14 @@ export default function Drawers() {
               TamTree
             </Typography>
           </Title>
-          <Box sx={{ display: mlist, flexGrow: 0.1 }}>
+          {/* <Box sx={{ display: mlist, flexGrow: 0.1 }}> */}
+          <Box sx={{ display:mlist}}>
             {navItems.map((item) => (
               <Button
                 className="button"
                 key={item.label}
-                sx={{ color: "#ffff", marginLeft: "10px" }}
+                // sx={{ color: "#ffff", marginLeft: "10px" }}
+                sx={{ color: "#ffff",marginLeft:"5px"}}
               >
                 <ListItemText>{item.label}</ListItemText>
               </Button>
@@ -207,5 +209,5 @@ export default function Drawers() {
         </List>
       </Drawer>
     </Container>
-  );
+  )
 }

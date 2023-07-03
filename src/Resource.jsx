@@ -12,11 +12,14 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { shadows } from "@mui/system";
 import { Translate } from "@mui/icons-material";
 import { useMediaQuery } from '@mui/material';
+import ScrollUnderline from "./ScrollUnderline";
 
 
 
 export default function Resource() {
-  const isSmallScreen = useMediaQuery('(max-width: 600px)');
+  const isSmallScreen = useMediaQuery('(max-width: 650px)');
+  const isMediumScreen = useMediaQuery('(min-width: 651px) and (max-width: 960px)');
+  const isLargeScreen = useMediaQuery('(min-width: 961px)');
 
 
 
@@ -24,7 +27,7 @@ export default function Resource() {
     // fade: true,
     infinite: true,
     speed: 700,
-    slidesToShow: isSmallScreen?1:2,
+    slidesToShow: isSmallScreen ? 1 : isMediumScreen ? 2 : 3,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
@@ -83,35 +86,45 @@ export default function Resource() {
     {
       id: 3,
       img: "https://images.pexels.com/photos/11813187/pexels-photo-11813187.jpeg?auto=compress&cs=tinysrgb&w=600",
-      title: "Frontend",
+      title: "Testing",
       description:
         "Frontend as a Service is a composable commerce solution that allows developers to use cloud-based modules to develop a fully performant eCommerce frontend",
     },
     {
       id: 4,
       img: "https://media.istockphoto.com/id/1393858554/photo/relational-database-tables-with-server-room-and-datacenter-background-concept-of-database.jpg?b=1&s=612x612&w=0&k=20&c=wsc-TM8hTxr08jfnns_mWFyJ9vUMHFU19h7B1U7Xepw=",
-      title: "Backend",
+      title: "Unique design",
       description:
         "Back-end developers are the experts who build and maintain the mechanisms that process data and perform actions on websites. Unlike front-end developers, who control everything you can see on a website",
     },
   ];
 
   return (
-    <Box sx={{ marginBottom: "15px", padding: "30px" }}>
-      <Typography
-        variant="h5"
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          fontStyle: "italic",
-        }}
-      >
-        <b>Resources</b>
-      </Typography>
+    <Box sx={{ marginBottom: "15px", padding: "30px" }}
+      data-aos="fade-left"
+      data-aos-duration="2000"
+      // data-aos-delay="500"
+      // data-aos-easing="ease-in-out"
+      // data-aos-mirror="false"
+      // data-aos-once="true"
+      // data-aos-anchor-placement="top-center"
+    >
+      <ScrollUnderline>
+        <Typography
+          variant="h5"
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            fontStyle: "italic",
+          }}
+        >
+          <b>Resources</b>
+        </Typography>
+      </ScrollUnderline>
       <Box>
         <Slider
           {...settings}
-          className={isSmallScreen ? "portfolioBoxM" : "portfolioBoxL"}
+          // className={isSmallScreen ? "portfolioBoxM" : "portfolioBoxL"}
         >
           {imageURL.map((item) => {
             return (
@@ -149,6 +162,7 @@ export default function Resource() {
                       {item.title}
                     </Typography>
                   </Container>
+
                   <Divider
                     sx={{
                       backgroundColor: "rgba(6, 150, 199)",
@@ -168,6 +182,8 @@ export default function Resource() {
                       textAlign: "center",
                       padding: "10px",
                       fontWeight: "700",
+                      height: "300px",
+                      overflow: "hidden",
                       // zIndex: 2,
                     }}
                   >

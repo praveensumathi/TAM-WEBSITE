@@ -100,7 +100,15 @@ export default function Resource() {
   ];
 
   return (
-    <Box sx={{ marginBottom: "15px", padding: "30px" }}>
+    <Box sx={{ marginBottom: "15px", padding: "30px" }}
+      data-aos="fade-left"
+      data-aos-duration="2000"
+      // data-aos-delay="500"
+      // data-aos-easing="ease-in-out"
+      // data-aos-mirror="false"
+      // data-aos-once="true"
+      // data-aos-anchor-placement="top-center"
+    >
       <ScrollUnderline>
         <Typography
           variant="h5"

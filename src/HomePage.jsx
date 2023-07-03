@@ -25,11 +25,12 @@ function HomePage() {
             zIndex:50,
           }}
         >
-          <Typography variant="h4" data-aos="fade-up"
-            data-aos-duration="3000" >
+          <Typography variant="h4"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000" >
             Transforming Ideas into Digital Masterpieces
-            Unleash Your Online Potential with our Exceptional Web Development
-            Services
+           
           </Typography>
           <Typography   sx={{ padding: "10px" }}>
             <p> Unleash Your Online Potential with our Exceptional Web Development

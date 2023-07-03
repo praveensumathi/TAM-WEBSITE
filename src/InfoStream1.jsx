@@ -113,7 +113,7 @@ function InfoStream1() {
   ];
 
   return (
-    <Box sx={{ marginBottom: "30px", padding: "30px" }}>
+    <Box sx={{ marginBottom: "30px", padding: "30px" }} data-aos="fade-left" data-aos-duration="2000">
       <ScrollUnderline>
         <Typography
           variant="h5"

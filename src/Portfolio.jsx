@@ -69,7 +69,7 @@ export default function Portfolio() {
   ];
 
   return (
-    <Box sx={{ marginBottom: "15px", padding: "30px" }}>
+    <Box sx={{ marginBottom: "15px", padding: "30px" }} data-aos="fade-left" data-aos-duration="2000">
       <ScrollUnderline>
         <Typography
           variant="h5"

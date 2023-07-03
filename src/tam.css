@@ -220,6 +220,7 @@ margin: 25px;
 
 .underline {
         position: relative;
+        
 }
 .underline::before {
     content: "";

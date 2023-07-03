@@ -14,6 +14,7 @@ import ListItem from "@mui/material/ListItem";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 
+
 import Techonologies from "./techonologies";
 import Home from "./Homeimage";
 import InfoStream1 from "./InfoStream1";
@@ -70,6 +71,7 @@ const Title = styled(Typography)({
   flexGrow: 1,
   padding: "10px",
 });
+
 const Container = styled("div")({
   width: "100%",
   height: "100vh",
@@ -80,6 +82,7 @@ export default function Drawers() {
   const mlist = isSmallScreen ? "block" : "none";
   const micon = isSmallScreen ? "none" : "block";
   
+  
   const [rightDrawerOpen, setRightDrawerOpen] = useState(false);
 
   const handleLeftDrawerOpen = () => {
@@ -89,9 +92,11 @@ export default function Drawers() {
   const handleRightDrawerClose = () => {
     setRightDrawerOpen(false);
   };
+ 
+
 
   return (
-    <Container className="scrollable-content">
+    <Container>
       <AppBar position="static">
         <Toolbar>
           <Title
@@ -115,16 +120,20 @@ export default function Drawers() {
                 backgroundColor: "black",
               }}
             />
-            <Typography variant="h4" sx={{ fontFamily: "cursive" }}>
+            <Typography
+              variant="h4"
+              className="title"
+              sx={{ fontFamily: "cursive" }}
+            >
               TamTree
             </Typography>
           </Title>
-          <Box sx={{ display: mlist, flexGrow: 0.6 }}>
+          <Box sx={{ display: mlist, flexGrow: 0.1 }}>
             {navItems.map((item) => (
               <Button
                 className="button"
                 key={item.label}
-                sx={{ color: "#ffff", padding: "8px" }}
+                sx={{ color: "#ffff", marginLeft: "10px" }}
               >
                 <ListItemText>{item.label}</ListItemText>
               </Button>

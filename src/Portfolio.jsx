@@ -6,10 +6,14 @@ import Typography from '@mui/material/Typography';
 import { Box, Button, CardActionArea, CardActions, } from '@mui/material';
 import Rating from '@mui/material/Rating';
 import { useMediaQuery } from '@mui/material';
-import "./tam.css"
+import "./tam.css";
+import "./Image.css";
+
 
 export default function Portfolio() {
+  
   const isSmallScreen = useMediaQuery('(max-width: 600px)');
+ 
 
   const image2 = [
     {
@@ -46,10 +50,23 @@ export default function Portfolio() {
     },
   ];
 
+  window.addEventListener("scroll", function () {
+    var titleElement = document.querySelector(".title");
+    var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+    if (scrollPosition > 0) {
+      titleElement.classList.add("underlined");
+    } else {
+      titleElement.classList.remove("underlined");
+    }
+  });
+  
   return (
     <Box sx={{ marginBottom: "15px", padding: "30px" }}>
       <Typography
         variant="h5"
+        className="title"
+        // className={`${classes.title} ${trigger ? "underline" : ""}`}
         sx={{
           display: "flex",
           justifyContent: "center",

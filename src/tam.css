@@ -43,8 +43,8 @@
 .btn:hover {
     color: #fff;
 }
-    /* padding: 40px;
-} */
+
+/* /////////////////// NAVBAR ////////////////////// */
 
 .button {
   color: #fff;
@@ -85,6 +85,7 @@
    width: 10px;
  }
 
+<<<<<<< HEAD
  *:hover::-webkit-scrollbar {
   width: 5px;
 }
@@ -98,6 +99,10 @@
   border: 3px solid blue;
 } 
 /* /////////////////////////////////////////////////////////////// */
+=======
+/* ////////////////////// PRELOADER ///////////////////////// */
+
+>>>>>>> baa15f585865e306cae46845586d96ccba9162b2
 .preloader {
     position: fixed;
     top: 0;
@@ -229,20 +234,30 @@ margin: 25px;
 }
 
 
-/* ////////////////////////////////////////// */
+/* ////////////////// UNDERLINE //////////////////////// */
 
 .underline {
         position: relative;
-        
 }
 .underline::before {
     content: "";
     position: absolute;
+    border-radius: 100px;
     left: 50%;
-    bottom: 0;
-    width: 12%;
-    height: 5px;
+    bottom: -2px;
+    width: 0;
+    height: 8px;
     transform: skew(-45deg) translateX(-50%);
-    background: rgb(241, 5, 5);
+    animation: underlineAnimation 1s forwards;
+    background-color: rgb(243, 50, 50);
     z-index: -1;
 }
+@keyframes underlineAnimation{
+    0% {
+            width: 0;
+        }
+    
+        100% {
+            width: 12%;
+        }
+    }

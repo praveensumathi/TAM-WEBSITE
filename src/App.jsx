@@ -9,7 +9,7 @@ import Drawer from "./Drawer";
 import Contact from "./Contact";
 import Home from "./Homeimage";
 import HomePage from "./HomePage";
-import Preloader from "./preloader";
+// import Preloader from "./preloader";
 import { createTheme, ThemeProvider } from "@mui/material";
 
 function App() {
@@ -62,15 +62,15 @@ function App() {
   return (
     <div>
       <CssBaseline />
-      {isLoading ? (
+      {/* {isLoading ? (
         <Preloader />
-      ) : (
-        <div>
-          <ThemeProvider theme={theme}>
-            <Drawer />
-          </ThemeProvider>
-        </div>
-      )}
+      ) : ( */}
+      <div>
+        <ThemeProvider theme={theme}>
+          <Drawer />
+        </ThemeProvider>
+      </div>
+      {/* )} */}
     </div>
   );
 }

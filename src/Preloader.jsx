@@ -1,7 +1,7 @@
 import React from "react";
 import "./tam.css"; // Import CSS for styling the preloader
 import { Box } from "@mui/material";
-import Logo2 from './image/Logo2.png'
+import Logo2 from "./image/Logo2.png";
 
 const Preloader = () => {
   return (

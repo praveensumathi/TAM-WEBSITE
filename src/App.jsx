@@ -9,9 +9,8 @@ import Drawer from "./Drawer";
 import Contact from "./Contact";
 import Home from "./Homeimage";
 import HomePage from "./HomePage";
-import Preloader from "./PreLoader";
-import { createTheme,ThemeProvider } from "@mui/material";
-
+import Preloader from "./preloader";
+import { createTheme, ThemeProvider } from "@mui/material";
 
 function App() {
   const theme = createTheme({
@@ -53,13 +52,13 @@ function App() {
     },
   });
 
-   const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
-   useEffect(() => {
-     setTimeout(() => {
-       setIsLoading(false);
-     }, 1500);
-   }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+  }, []);
   return (
     <div>
       <CssBaseline />
@@ -74,5 +73,5 @@ function App() {
       )}
     </div>
   );
-};
+}
 export default App;

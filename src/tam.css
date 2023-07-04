@@ -73,11 +73,11 @@
   width: 100%;
   left: 0;
 
-  background: linear-gradient(to left, #0905fa, #fa055f 100%);
+  background: linear-gradient(to left, #0905fa, #fb6cc9 100%);
 }
 .button:hover {
     /* color: linear-gradient( #f69ec4, #f9dd94 ); */
-    background: linear-gradient(45deg, #0905fa, #fa055f);
+    background: linear-gradient(45deg, #7371eb, #fb6cc9);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     cursor: pointer;
@@ -97,11 +97,11 @@
 }
 
 *::-webkit-scrollbar-track {
-    background: #ace0a8;
+    background: #f5a9a5;
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: #0a7802;
+    background-color: #a6110a;
     border-radius: 20px;
     /* border: 3px solid blue; */
 }

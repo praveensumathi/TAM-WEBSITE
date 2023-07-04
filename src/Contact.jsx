@@ -38,7 +38,7 @@ const Contact = () => {
     };
 
     return (
-      <Box className="img" style={backgroundStyle}>
+      <Box className="img" style={backgroundStyle} >
         <ScrollUnderline>
           <Typography
             variant="h5"
@@ -47,7 +47,6 @@ const Contact = () => {
               justifyContent: "center",
               marginBottom: "20px",
               fontStyle: "italic",
-              color: "white",
             }}
           >
             Contact Us
@@ -59,6 +58,9 @@ const Contact = () => {
             paddingRight: fieldrl,
             paddingLeft: fieldrl,
           }}
+          data-aos="zoom-in"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="1000"
         >
           <TextField
             label="Name"
@@ -119,6 +121,7 @@ const Contact = () => {
               type="submit"
               variant="contained"
               color="primary"
+              className='btn'
               onClick={handleSubmit}
               sx={{ textTransform: "none", marginTop: btn }}
             >

@@ -9,54 +9,55 @@ import Drawer from "./Drawer";
 import Contact from "./Contact";
 import Home from "./Homeimage";
 import HomePage from "./HomePage";
-import Preloader from "./PreLoader";
-import { ThemeProvider, createTheme,  } from "@mui/material/styles";
+import Preloader from "./Preloader";
+import { createTheme, ThemeProvider } from "@mui/material";
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: "#05fa5b",
+        contrastText: "#fff",
+        darker: "#053e85",
+      },
+      secondary: {
+        main: "#b3c4a5",
+      },
+    },
+    typography: {
+      h5: {
+        color: "#191de6",
+      },
+    },
+    components: {
+      MuiButton: {
+        styleOverrides: {
+          root: {
+            "&:hover": {
+              background: "#00bcd4",
+              contrastText: "#fff",
+            },
+          },
+        },
+      },
+      MuiTextField: {
+        styleOverrides: {
+          root: {
+            "&:hover": {
+              boxShadow: "1px 1px 10px #05fa5b",
+            },
+          },
+        },
+      },
+    },
+  });
 
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
     }, 1500);
   }, []);
-  const theme = createTheme({
-    //   components: {
-    //     MuiButton: {
-    //       styleOverrides: {
-    //         root: ({ ownerState }) => ({
-    //           ...(ownerState.variant === "contained" &&
-    //             ownerState.color === "primary" && {
-    //               backgroundColor: "#202020",
-    //               color: "#fff",
-    //             }),
-    //         }),
-    //       },
-    //     },
-    //   },
-    palette: {
-      primary: {
-        main: "#f8fc03",
-      },
-      secondary: {
-        main: "#f8fc03",
-      },
-    },
-
-    typography: {
-      h5: {
-        color: "green",
-        fontWeight: "bold",
-      },
-      body3: {
-        color: "red",
-      },
-      one: {
-        color: "red",
-      },
-    },
-  });
-
   return (
     <div>
       <CssBaseline />
@@ -66,11 +67,10 @@ function App() {
         <div>
           <ThemeProvider theme={theme}>
             <Drawer />
-            
           </ThemeProvider>
         </div>
       )}
     </div>
   );
-};
+}
 export default App;

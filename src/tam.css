@@ -29,10 +29,10 @@
     right: 0;
     width: 0%;
     height: 100%;
-    background: blue;
+    background: #00bcd4;
     transition: .3s linear;
     z-index: -1;
-    /* color: #fff; */
+    color: #fff;
 }
 
 .btn:hover::before {
@@ -59,7 +59,7 @@
 .button::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: 5px;
   left: 50%;
   display: block;
   background: none repeat scroll 0 0 transparent;
@@ -73,34 +73,41 @@
   width: 100%;
   left: 0;
 
-  background: linear-gradient(to left, #f69ec4, #f9dd94 100%);
+  background: linear-gradient(to left, #0905fa, #fa055f 100%);
+}
+.button:hover {
+    /* color: linear-gradient( #f69ec4, #f9dd94 ); */
+    background: linear-gradient(45deg, #0905fa, #fa055f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
 }
 
 .button:hover {
   color: whitesmoke;
 }
 
- /* ////////////////////Scrolbar design////////////////// */
- *::-webkit-scrollbar {
-   width: 10px;
- }
+/* ////////////////////Scrolbar design////////////////// */
+*::-webkit-scrollbar {
+    width: 10px;
+}
 
- *:hover::-webkit-scrollbar {
-  width: 5px;
- 
+*:hover::-webkit-scrollbar {
+    width: 5px;
 }
 
 *::-webkit-scrollbar-track {
-  background: lightblue;
-
-
+    background: #ace0a8;
 }
+
 *::-webkit-scrollbar-thumb {
-  background-color:blue;
-  border-radius: 20px;
-  border: 3px solid blue;
-} 
-/* /////////////////////////////////////////////////////////////// */
+    background-color: #0a7802;
+    border-radius: 20px;
+    /* border: 3px solid blue; */
+}
+
+/* ////////////////////// PRELOADER //////////////////////// */
+
 .preloader {
     position: fixed;
     top: 0;
@@ -242,13 +249,13 @@ margin: 25px;
     position: absolute;
     border-radius: 100px;
     left: 50%;
-    bottom: -2px;
+    bottom: -10px;
     width: 0;
     height: 8px;
     transform: skew(-45deg) translateX(-50%);
     animation: underlineAnimation 1s forwards;
     background-color: rgb(243, 50, 50);
-    z-index: -1;
+    z-index: 1;
 }
 @keyframes underlineAnimation{
     0% {
@@ -259,3 +266,33 @@ margin: 25px;
             width: 12%;
         }
     }
+@media screen and (max-width:640px) {
+
+    .underline {
+            position: relative;
+        }
+    
+        .underline::before {
+            content: "";
+            position: absolute;
+            border-radius: 200px;
+            left: 50%;
+            bottom: -2px;
+            width: 0;
+            height: 5px;
+            transform: skew(-45deg) translateX(-50%);
+            animation: underlineAnimation 1s forwards;
+            background-color: rgb(243, 50, 50);
+            z-index: -1;
+        }
+    
+        @keyframes underlineAnimation {
+            0% {
+                width: 0;
+            }
+    
+            100% {
+                width: 30%;
+            }
+        }
+}

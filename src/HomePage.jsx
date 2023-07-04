@@ -26,7 +26,7 @@ function HomePage() {
           }}
         >
           <Typography variant="h4"
-            data-aos="flip-left"
+            data-aos="fade-up"
             data-aos-easing="ease-out-cubic"
             data-aos-duration="2000" >
             Transforming Ideas into Digital Masterpieces
@@ -40,6 +40,7 @@ function HomePage() {
         <Box sx={{ textAlign: "center"}}>
           <Button
             variant="contained"
+            className="btn"
             sx={{
               marginBottom: "10px",
               borderRadius: "20px",

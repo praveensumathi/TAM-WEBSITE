@@ -54,17 +54,17 @@ export default function Portfolio() {
     {
       id: 3,
       img: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600",
-      title: "project-1",
+      title: "project-3",
       description:
-        "Back-end developers are the experts who build and maintain the mechanisms that process data and perform actions on websites. Unlike front-end developers, who control everything you can see on a website",
+        "Testing in the context of software development refers to the process of verifying and validating a system or component to ensure that it meets the specified requirements. It involves executing the system or component with test cases to uncover any defects or errors.",
       star: 4,
     },
     {
       id: 4,
       img: "https://images.pexels.com/photos/811587/pexels-photo-811587.jpeg?auto=compress&cs=tinysrgb&w=600",
-      title: "project-2",
+      title: "project-4",
       description:
-        "Frontend as a Service is a composable commerce solution that allows developers to use cloud-based modules to develop a fully performant eCommerce frontend",
+        "Unique design refers to the creation of visually distinct and innovative designs that stand out from conventional or standard designs. It involves exploring creative and original approaches to visual elements, layout, color schemes, typography, and interactive elements.",
       star: 5,
     },
   ];
@@ -120,11 +120,11 @@ export default function Portfolio() {
                 alt="green iguana"
               />
               <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography gutterBottom variant="h6" component="div">
                   {item.title}
                 </Typography>
                 <Rating name="read-only" defaultValue={item.star} readOnly />
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" color="secondary">
                   {item.description}
                 </Typography>
               </CardContent>

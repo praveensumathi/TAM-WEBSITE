@@ -98,7 +98,7 @@ export default function Drawers() {
             // variant="h6"
             component="div"
             paddingTop="10px"
-            color="yellowgreen"
+            color="#26c20cf5"
             display="flex"
             // backgroundcolor="red"
             alignItems={"center"}
@@ -115,22 +115,25 @@ export default function Drawers() {
                 backgroundColor: "black",
               }}
             />
-            <Typography variant="h4"  sx={{ fontFamily: "cursive" ,color:"#d1fa05" }}>
+            <Typography
+              variant="h4"
+              sx={{ fontFamily: "cursive", color: "#d1fa05" }}
+            >
               TamTree
             </Typography>
           </Title>
-          <Box sx={{ display:mlist}}>
+          <Box sx={{ display: mlist }}>
             {navItems.map((item) => (
               <List
                 variant="h6"
                 className="button"
                 key={item.label}
-                sx={{ color: "#ffff",marginLeft:"20px",marginRight:"10px"}}
+                sx={{ color: "#ffff", marginLeft: "20px", marginRight: "10px" }}
               >
                 <ListItemText>{item.label}</ListItemText>
               </List>
             ))}
-          </Box>  
+          </Box>
           <IconButton
             edge="end"
             color="inherit"
@@ -168,10 +171,11 @@ export default function Drawers() {
           },
         }}
       >
-        <DrawerHeader>
+        <DrawerHeader sx={{ backgroundColor: "#a6110a" }}>
           <Typography
             variant="h6"
             component="div"
+            color="secondary"
             sx={{ flexGrow: 1, display: "flex", alignItems: "center" }}
           >
             <Box
@@ -181,12 +185,12 @@ export default function Drawers() {
                 height: "40px",
                 width: "40px",
                 borderRadius: "50%",
-                // backgroundColor: "black",
+                backgroundColor: "#fceed2",
               }}
             />
             Tam Tree
           </Typography>
-          <IconButton onClick={handleRightDrawerClose}>
+          <IconButton onClick={handleRightDrawerClose} color="secondary">
             <ClearIcon />
           </IconButton>
         </DrawerHeader>

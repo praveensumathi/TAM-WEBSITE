@@ -34,7 +34,6 @@ export default function Portfolio() {
   //     window.removeEventListener("scroll", handleScroll);
   //   };
   // }, []);
-
   const image2 = [
     {
       id: 1,
@@ -132,9 +131,10 @@ export default function Portfolio() {
             </CardActionArea>
             <CardActions>
               <Button
+                color="primary"
                 className="btn"
                 size="small"
-                color="primary"
+               
                 sx={{
                   marginBottom: "10px",
                   ml: "auto",

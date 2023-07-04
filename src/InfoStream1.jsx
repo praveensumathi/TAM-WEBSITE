@@ -145,7 +145,7 @@ function InfoStream1() {
                   >
                     {item.title}
                   </Typography>
-                  <Typography paragraph>{item.discription}</Typography>
+                  <Typography paragraph="body3">{item.discription}</Typography>
                   <Button
                     className="btn"
                     variant="text"

@@ -8,7 +8,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Drawer from "@mui/material/Drawer";
 import ListItemText from "@mui/material/ListItemText";
 import ClearIcon from "@mui/icons-material/Clear";
-import AttractionsIcon from "@mui/icons-material/Attractions";
+// import AttractionsIcon from "@mui/icons-material/Attractions";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import Box from "@mui/material/Box";
@@ -24,7 +24,7 @@ import Contact from "./Contact";
 import About from "./About";
 import Portfolio from "./Portfolio";
 import { Divider } from "@mui/material";
-import Logo2 from './image/Logo2.png';
+// import Logo2 from './image/Logo2.png';
 import Logo1 from './image/Logo1.png';
 import HomePage from "./HomePage";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -65,6 +65,7 @@ const DrawerHeader = styled("div")({
   alignItems: "center",
   justifyContent: "space-between",
   padding: "8px 16px",
+ 
 });
 
 const Title = styled(Typography)({
@@ -96,7 +97,7 @@ export default function Drawers() {
 
 
   return (
-    <Container>
+    <Container className="scrollable-content">
       <AppBar position="static">
         <Toolbar>
           <Title
@@ -131,14 +132,14 @@ export default function Drawers() {
           {/* <Box sx={{ display: mlist, flexGrow: 0.1 }}> */}
           <Box sx={{ display:mlist}}>
             {navItems.map((item) => (
-              <Button
+              <List variant="one"
                 className="button"
                 key={item.label}
                 // sx={{ color: "#ffff", marginLeft: "10px" }}
-                sx={{ color: "#ffff",marginLeft:"5px"}}
+                sx={{ marginLeft:"5px"}}
               >
                 <ListItemText>{item.label}</ListItemText>
-              </Button>
+              </List>
             ))}
           </Box>
           <IconButton
@@ -200,7 +201,8 @@ export default function Drawers() {
             <ClearIcon />
           </IconButton>
         </DrawerHeader>
-        <List>
+        <List
+        variant="one">
           {navItems.map((item) => (
             <ListItem key={item.label} onClick={handleRightDrawerClose}>
               <ListItemText>{item.label}</ListItemText>

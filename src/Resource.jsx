@@ -176,7 +176,7 @@ export default function Resource() {
                     sx={{ width: "100%", height: "20vh" }}
                   />
                   <Typography
-                    paragraph
+                    paragraph="body3"
                     sx={{
                       fontSize: 20,
                       textAlign: "center",

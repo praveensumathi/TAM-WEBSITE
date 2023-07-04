@@ -85,13 +85,15 @@
    width: 10px;
  }
 
-<<<<<<< HEAD
  *:hover::-webkit-scrollbar {
   width: 5px;
+ 
 }
 
 *::-webkit-scrollbar-track {
   background: lightblue;
+
+
 }
 *::-webkit-scrollbar-thumb {
   background-color:blue;
@@ -99,10 +101,6 @@
   border: 3px solid blue;
 } 
 /* /////////////////////////////////////////////////////////////// */
-=======
-/* ////////////////////// PRELOADER ///////////////////////// */
-
->>>>>>> baa15f585865e306cae46845586d96ccba9162b2
 .preloader {
     position: fixed;
     top: 0;
